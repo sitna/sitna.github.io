@@ -9,13 +9,16 @@
     <div id="mapa"></div>
     <script>
         const myMap = new SITNA.Map("mapa", {
+            // Establecemos cuatro capas para el fondo, por defecto la imagen satélite ofrecida por Mapbox
             baseLayers: [
                 SITNA.Consts.layer.MAPBOX_SATELLITE,
                 SITNA.Consts.layer.MAPBOX_STREETS,
                 SITNA.Consts.layer.CARTO_LIGHT,
                 SITNA.Consts.layer.CARTO_DARK
             ],
+            // Establecemos el sistema de referencia de coordenadas (CRS)
             crs: "EPSG:3857",
+            // Las coordenadas deben estar en EPSG:3857
             initialExtent: [-8916022, 3179736, 9869141, 11789603]
         });
     </script>
