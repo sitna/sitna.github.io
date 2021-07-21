@@ -67,7 +67,7 @@ const myMap = new SITNA.Map("mapa", {
 El visor tiene ahora [este aspecto](getting-started/03.html).
 
 ### 4. Cambiando el sistema de referencia de coordenadas
-Podemos comprobar que el mapa de fondo que hemos elegido no es el más adecuado para mostrar un visor de la Unión Europea porque solamente cubre el territorio español, así que hay que elegir otra capa más adecuada para ello. Ya que estamos, vamos a añadir alguna más para dar al usuario la opción de tener distintos mapas de fondo. Vamos a incluir una capa de vista satélite de Mapbox y unas capas de Carto.
+Podemos comprobar que el mapa de fondo que hemos elegido no es el más adecuado para mostrar un visor de la Unión Europea porque solamente cubre el territorio español, así que hay que elegir otra capa más adecuada para ello. Ya que estamos, vamos a añadir alguna más para dar al usuario la opción de tener distintos mapas de fondo. Vamos a incluir una capa de vista satélite de Mapbox y unos mapas base de Mapbox y Carto.
 
 Pero antes de hacer el cambio, hay que tener en cuenta que esas capas solamente son compatibles con el sistema de referencia de coordenadas EPSG:3587, típico de capas que tienen cobertura mundial. Por tanto, hay que utilizar la opción `crs` para establecerlo. No hay que olvidar establecer las coordenadas de `initialExtent` en el nuevo sistema de referencia de coordenadas.
 
@@ -85,3 +85,28 @@ const myMap = new SITNA.Map("mapa", {
 ```
 Obtenemos [este resultado](getting-started/04.html). Comprueba que si abrimos la pestaña de herramientas, podemos cambiar el mapa de fondo que estamos viendo.
 
+### 5. Añadiendo capas de trabajo
+El visor hasta ahora es poco interesante, porque no tenemos más que un fondo. Vamos a añadir alguna capa sobre la que trabajar. Por ejemplo, vamos a añadir una capa que muestra los países de la Unión Europea desde un servicio WMS de la Agencia Europea de Medio Ambiente:
+
+```javascript
+const myMap = new SITNA.Map("mapa", {
+    baseLayers: [
+        SITNA.Consts.layer.MAPBOX_SATELLITE,
+        SITNA.Consts.layer.MAPBOX_STREETS,
+        SITNA.Consts.layer.CARTO_LIGHT,
+        SITNA.Consts.layer.CARTO_DARK
+    ],
+    crs: "EPSG:3857",
+    initialExtent: [-8916022, 3179736, 9869141, 11789603],
+    workLayers: [
+        {
+            id: "paises",
+            type: SITNA.Consts.layerType.WMS,
+            url: "https://bio.discomap.eea.europa.eu/arcgis/services/Internal/Basemap_EEA38_WM/MapServer/WMSServer",
+            layerNames: ["2", "4"]
+        }
+    ]
+});
+```
+Y ya tenemos [los países en el mapa](getting-started/05.html). Si pulsas sobre un país, enviarás una consulta `GetFeatureInfo` al servicio WMS y obtendrás información relevante.
+Los valores de la opción `layerNames` se han obtenido del [documento de capacidades del servicio WMS](https://bio.discomap.eea.europa.eu/arcgis/services/Internal/Basemap_EEA38_WM/MapServer/WMSServer?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities).
