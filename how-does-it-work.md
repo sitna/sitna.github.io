@@ -7,12 +7,12 @@ Internamente la API SITNA se basa en el motor de [OpenLayers](https://openlayers
 Datos raster y datos vectoriales, en 2D y en un globo 3D.
 
 ## ¿Cómo consume los datos?
-La API SITNA se basa enteramente en estándares. Las fuentes de datos se dividen en dos tipos:
+La API SITNA se basa enteramente en estándares. Las fuentes de datos se pueden dividir en dos tipos:
 - Servicios OGC: raster (WMS, WMTS) y vectoriales (WFS).
-- Archivos de datos: KML, KMZ, GeoJSON, GML, WKT, Shape, GeoPackage, JPEG, PNG
+- Archivos de datos: KML, KMZ, GeoJSON, GML, WKT, Shape, GeoPackage, JPEG, PNG.
 
 ## ¿Cómo se configura?
 Tres vías, por orden de prioridad:
-- Parámetros del constructor `SITNA.Map`
-- Maquetación
-- Objeto de configuración global `SITNA.Cfg`
+- Parámetros del constructor `SITNA.Map`.
+- Maquetación.
+- Objeto de configuración global `SITNA.Cfg`.
