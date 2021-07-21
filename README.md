@@ -171,7 +171,7 @@ const myMap = new SITNA.Map("mapa", {
         {
             id: "rios",
             type: SITNA.Consts.layerType.VECTOR,
-            url: "data/rivers.kml",
+            url: "//sitna.github.io/getting-started/data/rivers.kml",
             title: "Ríos"
         },
         // Añadimos una capa con un archivo GeoJSON de capitales
@@ -179,7 +179,7 @@ const myMap = new SITNA.Map("mapa", {
             id: "capitales",
             type: SITNA.Consts.layerType.VECTOR,
             format: SITNA.Consts.mimeType.GEOJSON,
-            url: "data/capitals.json",
+            url: "//sitna.github.io/getting-started/data/capitals.json",
             title: "Capitales del mundo"
         }
     ]
@@ -211,14 +211,14 @@ const myMap = new SITNA.Map("mapa", {
         {
             id: "rios",
             type: SITNA.Consts.layerType.VECTOR,
-            url: "data/rivers.kml",
+            url: "//sitna.github.io/getting-started/data/rivers.kml",
             title: "Ríos"
         },
         {
             id: "capitales",
             type: SITNA.Consts.layerType.VECTOR,
             format: SITNA.Consts.mimeType.GEOJSON,
-            url: "data/capitals.json",
+            url: "//sitna.github.io/getting-started/data/capitals.json",
             title: "Capitales del mundo"
         }
     ],
@@ -259,14 +259,14 @@ const myMap = new SITNA.Map("mapa", {
         {
             id: "rios",
             type: SITNA.Consts.layerType.VECTOR,
-            url: "data/rivers.kml",
+            url: "//sitna.github.io/getting-started/data/rivers.kml",
             title: "Ríos"
         },
         {
             id: "capitales",
             type: SITNA.Consts.layerType.VECTOR,
             format: SITNA.Consts.mimeType.GEOJSON,
-            url: "data/capitals.json",
+            url: "//sitna.github.io/getting-started/data/capitals.json",
             title: "Capitales del mundo"
         }
     ],
@@ -318,14 +318,14 @@ const myMap = new SITNA.Map("mapa", {
         {
             id: "rios",
             type: SITNA.Consts.layerType.VECTOR,
-            url: "data/rivers.kml",
+            url: "//sitna.github.io/getting-started/data/rivers.kml",
             title: "Ríos"
         },
         {
             id: "capitales",
             type: SITNA.Consts.layerType.VECTOR,
             format: SITNA.Consts.mimeType.GEOJSON,
-            url: "data/capitals.json",
+            url: "//sitna.github.io/getting-started/data/capitals.json",
             title: "Capitales del mundo"
         }
     ],
@@ -381,14 +381,14 @@ const myMap = new SITNA.Map("mapa", {
         {
             id: "rios",
             type: SITNA.Consts.layerType.VECTOR,
-            url: "data/rivers.kml",
+            url: "//sitna.github.io/getting-started/data/rivers.kml",
             title: "Ríos"
         },
         {
             id: "capitales",
             type: SITNA.Consts.layerType.VECTOR,
             format: SITNA.Consts.mimeType.GEOJSON,
-            url: "data/capitals.json",
+            url: "//sitna.github.io/getting-started/data/capitals.json",
             title: "Capitales del mundo"
         }
     ],
