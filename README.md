@@ -457,3 +457,91 @@ myMap.loaded(() => {
 });
 ```
 Con estos cambios, los marcadores [están clasificados y tienen información asociada](getting-started/11.html).
+
+### 12. Estableciendo una maquetación
+Aunque en base a parámetros del constructor de `SITNA.Map` es posible un gran grado de personalización, puede no ser suficiente. Por ejemplo, puede interesar que el visor tenga una imagen corporativa, o que incluya controles de usuario en lugares distintos a los ofrecidos por defecto. Para esos casos existe el mecanismo de maquetación. Una maquetación, o `layout` es una carpeta donde habrá uno o más de los siguientes archivos:
+- Un [documento JSON](getting-started/layout/my-layout/config.json) con la configuración a pasar al objeto de mapa.
+- Un [documento de texto con HTML](getting-started/layout/my-layout/markup.html) representando el marcado que deseamos que se incruste en el contenedor del mapa. Este marcado será el andamiaje donde se colocarán los controles de usuario.
+- Una [hoja CSS](getting-started/layout/my-layout/style.css).
+- Un [archivo JavaScript](getting-started/layout/my-layout/script.js) donde meter la lógica concerniente a los elementos del marcado.
+
+Vamos a quitar de los parámetros del constructor la configuración del visor que hemos creado y la vamos a añadir a una maquetación:
+
+```javascript
+const myMap = new SITNA.Map("mapa", {
+    layout: "layout/my-layout"
+});
+
+myMap.loaded(() => {
+    myMap.addLayer({
+        id: "poi",
+        type: SITNA.Consts.layerType.VECTOR,
+        title: "Puntos de interés"
+    }, () => {
+        myMap.addMarker([-203288, 6652999], {
+            layer: "poi",
+            group: "Prehistoria",
+            data: {
+                "Nombre": "Stonehenge",
+                "Fecha de inicio de construcción": "2400-2200 a.e.c.",
+                "Uso": "Desconocido"
+            }
+        });
+        myMap.addMarker([1390641, 5144550], {
+            layer: "poi",
+            group: "Edad Antigua",
+            data: {
+                "Nombre": "Coliseo",
+                "Fecha de inicio de construcción": "72 e.c.",
+                "Uso": "Anfiteatro"
+            }
+        });
+        myMap.addMarker([677254, 6581543], {
+            layer: "poi",
+            group: "Edad Media",
+            data: {
+                "Nombre": "Catedral de Aquisgrán",
+                "Fecha de inicio de construcción": "796",
+                "Uso": "Templo"
+            }
+        });
+        myMap.addMarker([-399432, 4463713], {
+            layer: "poi",
+            group: "Edad Media",
+            data: {
+                "Nombre": "Alhambra",
+                "Fecha de inicio de construcción": "c. 1238",
+                "Uso": "Residencia"
+            }
+        });
+        myMap.addMarker([-720856, 7112550], {
+            layer: "poi",
+            group: "Prehistoria",
+            data: {
+                "Nombre": "Newgrange",
+                "Fecha de inicio de construcción": "3300-2900 a.e.c.",
+                "Uso": "Funerario"
+            }
+        });
+        myMap.addMarker([2641252, 4575413], {
+            layer: "poi",
+            group: "Edad Antigua",
+            data: {
+                "Nombre": "Partenón",
+                "Fecha de inicio de construcción": "447 a.e.c.",
+                "Uso": "Templo"
+            }
+        });
+        myMap.addMarker([236074, 6241789], {
+            layer: "poi",
+            group: "Edad Moderna",
+            data: {
+                "Nombre": "Palacio de Versalles",
+                "Fecha de inicio de construcción": "1661",
+                "Uso": "Residencia"
+            }
+        });
+    });
+});
+```
+Ahora tenemos un [visor con una maquetación personalizada](getting-started/12.html). Hemos eliminado controles superfluos y hemos colocado los que nos interesan en otro contenedor.
