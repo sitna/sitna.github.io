@@ -27,7 +27,7 @@ Para incrustar un visor en una aplicación web, hacen falta tres elementos:
 ### 1. Visor por defecto
 Como primer paso, creamos un documento HTML que incluya los tres elementos:
 
-[Editar código](https://jsfiddle.net/bnq56tou/)
+[[Editar código]](https://jsfiddle.net/bnq56tou/)
 ```html
 <!DOCTYPE html>
 <html>
