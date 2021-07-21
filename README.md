@@ -51,6 +51,7 @@ Vamos a empezar a modificar los valores por defecto del visor. El constructor de
 
 ```javascript
 const myMap = new SITNA.Map("mapa", {
+    // Establecemos como única capa base la ortofotografía del IGN
     baseLayers: [SITNA.Consts.layer.IGN_ES_ORTHOPHOTO]
 });
 ```
