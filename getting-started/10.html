@@ -48,11 +48,13 @@
         });
 
         myMap.loaded(() => {
+            // Creamos una capa de tipo vectorial para los marcadores
             myMap.addLayer({
                 id: "poi",
                 type: SITNA.Consts.layerType.VECTOR,
                 title: "Puntos de interés"
             }, () => {
+                // Creamos los marcadores en la capa creada
                 myMap.addMarker([-203288, 6652999], { layer: "poi" });
                 myMap.addMarker([1390641, 5144550], { layer: "poi" });
                 myMap.addMarker([677254, 6581543], { layer: "poi" });
