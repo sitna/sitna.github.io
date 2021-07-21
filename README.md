@@ -484,6 +484,7 @@ Aunque en base a parámetros del constructor de `SITNA.Map` es posible un gran g
 - Un [archivo JavaScript](getting-started/layout/my-layout/script.js) donde meter la lógica concerniente a los elementos del marcado.
 
 Vamos a quitar de los parámetros del constructor la configuración del visor que hemos creado y la vamos a añadir a una maquetación:
+https://jsfiddle.net/r5tmf0xw/
 
 ```javascript
 const myMap = new SITNA.Map("mapa", {
