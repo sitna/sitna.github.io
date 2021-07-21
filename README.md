@@ -136,3 +136,42 @@ const myMap = new SITNA.Map("mapa", {
 });
 ```
 El resultado [es este](getting-started/06.html).
+
+### 7. Añadiendo entidades vectoriales en archivos geográficos
+Además de datos raster, es posible añadir datos vectoriales desde un servicio WFS o desde archivos geográficos en formato KML, GeoJSON, etc. Vamos a añadir un par de archivos:
+
+```javascript
+const myMap = new SITNA.Map("mapa", {
+    baseLayers: [
+        SITNA.Consts.layer.MAPBOX_SATELLITE,
+        SITNA.Consts.layer.MAPBOX_STREETS,
+        SITNA.Consts.layer.CARTO_LIGHT,
+        SITNA.Consts.layer.CARTO_DARK
+    ],
+    crs: "EPSG:3857",
+    initialExtent: [-8916022, 3179736, 9869141, 11789603],
+    workLayers: [
+        {
+            id: "paises",
+            type: SITNA.Consts.layerType.WMS,
+            url: "https://bio.discomap.eea.europa.eu/arcgis/services/Internal/Basemap_EEA38_WM/MapServer/WMSServer",
+            layerNames: ["4"],
+            title: "Países del mundo"
+        },
+        {
+            id: "rios",
+            type: SITNA.Consts.layerType.VECTOR,
+            url: "data/rivers.kml",
+            title: "Ríos"
+        },
+        {
+            id: "capitales",
+            type: SITNA.Consts.layerType.VECTOR,
+            format: SITNA.Consts.mimeType.GEOJSON,
+            url: "data/capitals.json",
+            title: "Capitales del mundo"
+        }
+    ]
+});
+```
+Y ya tenemos [dos capas de trabajo más](getting-started/07.html). La API SITNA intenta inferir el formato de archivo geográfico por su extensión en el nombre, por eso la capa de ríos es reconocida como un archivo KML. No obstante, se puede especificar mediante la propiedad `format`, como en la capa de capitales.
