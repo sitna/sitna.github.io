@@ -27,6 +27,7 @@ Para incrustar un visor en una aplicación web, hacen falta tres elementos:
 ### 1. Visor por defecto
 Como primer paso, creamos un documento HTML que incluya los tres elementos:
 
+https://jsfiddle.net/bnq56tou/
 ```html
 <!DOCTYPE html>
 <html>
@@ -49,6 +50,7 @@ Y así tenemos [nuestro primer visor](getting-started/01.html). Podemos observar
 ### 2. Cambiando el mapa de fondo
 Vamos a empezar a modificar los valores por defecto del visor. El constructor de `SITNA.Map` acepta como segundo parámetro un objeto con el que se le pueden pasar opciones de configuración. Supongamos que queremos poner una ortofotografía como mapa de fondo. Para ello introduciremos la opción `baseLayers`:
 
+https://jsfiddle.net/bsreLf6v/
 ```javascript
 const myMap = new SITNA.Map("mapa", {
     // Establecemos como única capa base la ortofotografía del IGN
@@ -60,6 +62,7 @@ Aquí tenemos [el resultado](getting-started/02.html). `SITNA.Consts.layer.IGN_E
 ### 3. Cambiando la extensión inicial del mapa
 Supongamos que queremos crear un visor centrado en la Unión Europea. Lo podemos hacer pasándole los valores adecuados a la opción `initialExtent`. Estos son cuatro coordenadas indicando los límites hacia el oeste, sur, este y norte de la extensión inicial del mapa. Dado que por defecto los mapas de la API SITNA utilizan el sistema de referencia de coordenadas EPSG:25830 (uno de los oficiales en la Península Ibérica), hay que introducir las coordenadas en ese sistema de referencia.
 
+https://jsfiddle.net/ztvjrqgk/
 ```javascript
 const myMap = new SITNA.Map("mapa", {
     baseLayers: [SITNA.Consts.layer.IGN_ES_ORTHOPHOTO],
@@ -74,6 +77,7 @@ Podemos comprobar que el mapa de fondo que hemos elegido no es el más adecuado 
 
 Pero antes de hacer el cambio, hay que tener en cuenta que esas capas solamente son compatibles con el sistema de referencia de coordenadas EPSG:3857, típico de capas que tienen cobertura mundial. Por tanto, hay que utilizar la opción `crs` para establecerlo. No hay que olvidar establecer las coordenadas de `initialExtent` en el nuevo sistema de referencia de coordenadas.
 
+https://jsfiddle.net/kn6w54L0/
 ```javascript
 const myMap = new SITNA.Map("mapa", {
     // Establecemos cuatro capas para el fondo, por defecto la imagen satélite ofrecida por Mapbox
@@ -94,6 +98,7 @@ Obtenemos [este resultado](getting-started/04.html). Comprueba que si abrimos la
 ### 5. Añadiendo capas de trabajo
 El visor hasta ahora es poco interesante, porque no tenemos más que un fondo. Vamos a añadir alguna capa sobre la que trabajar. Por ejemplo, vamos a añadir una capa que muestra los países de la Unión Europea desde un servicio WMS de la Agencia Europea de Medio Ambiente:
 
+https://jsfiddle.net/4dstumx0/
 ```javascript
 const myMap = new SITNA.Map("mapa", {
     baseLayers: [
@@ -121,6 +126,7 @@ Los valores de la opción `layerNames` se han obtenido del [documento de capacid
 ### 6. Ajustando las capas de trabajo
 Tal como está el visor ahora, tenemos información de los países, pero ya no se ve la ortofotografía. Además, si miramos en las herramientas vemos que la capa cargada tiene un nombre poco amigable. Vamos a dejar solo las fronteras y vamos a poner un título a la capa:
 
+https://jsfiddle.net/9o83dh2m/
 ```javascript
 const myMap = new SITNA.Map("mapa", {
     baseLayers: [
