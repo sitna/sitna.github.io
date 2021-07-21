@@ -2,7 +2,7 @@
 API JavaScript para la visualización de datos georreferenciados en aplicaciones web.
 
 ## Documentación
-http://sitna.navarra.es/api/doc/
+[https://sitna.navarra.es/api/doc/](https://sitna.navarra.es/api/doc/)
 
 ## Sobre la API SITNA
 La API SITNA es una API JavaScript que permite incluir en páginas y aplicaciones web un visor de mapas interactivo y así representar información georreferenciada.
@@ -21,9 +21,10 @@ Entre otras capacidades, la API SITNA:
 
 Para incrustar un visor en una aplicación web, hacen falta tres elementos:
 - Un elemento `script` con la dirección de la API SITNA. Normalmente esta será https://sitna.navarra.es/api/.
-- Un elemento de bloque, por ejemplo un `div`, donde incrustar el visor.
-- Un elemento `script` donde se instancie un objeto de la clase `SITNA.Map`.
+- Un elemento de bloque, por ejemplo un `div`, que haga de contenedor donde incrustar el visor.
+- Un elemento `script` donde se instancie un objeto de la clase `SITNA.Map`. Como parámetro del constructor le pasaremos el identificador del elemento contenedor.
 
+### 1. Visor por defecto
 Como primer paso, creamos un documento HTML que incluya los tres elementos:
 
 ```html
@@ -31,7 +32,7 @@ Como primer paso, creamos un documento HTML que incluya los tres elementos:
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>Taller API SITNA</title>
+    <title>Empezando con la API SITNA</title>
 </head>
 <body>
     <script src="//sitna.navarra.es/api/"></script>
@@ -42,5 +43,14 @@ Como primer paso, creamos un documento HTML que incluya los tres elementos:
 </body>
 </html>
 ```
-
 Y así tenemos [nuestro primer visor](getting-started/01.html). Podemos observar que está centrado en Navarra y que el mapa de fondo es de un servicio WMTS de IDENA.
+
+### 2. Cambiando el mapa de fondo
+Vamos a empezar a modificar los valores por defecto del visor. El constructor de `SITNA.Map` acepta como segundo parámetro un objeto con el que se le pueden pasar opciones de configuración. Supongamos que queremos poner una ortofotografía como mapa de fondo. Para ello introduciremos la opción `baseLayers`:
+
+```javascript
+const myMap = new SITNA.Map("mapa", {
+    baseLayers: [SITNA.Consts.layer.IGN_ES_ORTHOPHOTO]
+});
+```
+Aquí tenemos [el resultado](getting-started/02.html).
