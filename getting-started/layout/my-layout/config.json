@@ -23,14 +23,14 @@
     {
       "id": "rios",
       "type": "vector",
-      "url": "data/rivers.kml",
+      "url": "//sitna.github.io/getting-started/data/rivers.kml",
       "title": "Ríos"
     },
     {
       "id": "capitales",
       "type": "vector",
       "format": "application/vnd.geo+json",
-      "url": "data/capitals.json",
+      "url": "//sitna.github.io/getting-started/data/capitals.json",
       "title": "Capitales del mundo"
     }
   ],
