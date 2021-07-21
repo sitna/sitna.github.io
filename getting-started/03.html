@@ -1,0 +1,17 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Taller API SITNA</title>
+</head>
+<body>
+    <script src="//sitna.navarra.es/api/"></script>
+    <div id="mapa"></div>
+    <script>
+        const myMap = new SITNA.Map("mapa", {
+            baseLayers: [SITNA.Consts.layer.IGN_ES_ORTHOPHOTO],
+            initialExtent: [-1300000, 2900000, 3500000, 8300000]
+        });
+    </script>
+</body>
+</html>
