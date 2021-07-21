@@ -53,4 +53,15 @@ const myMap = new SITNA.Map("mapa", {
     baseLayers: [SITNA.Consts.layer.IGN_ES_ORTHOPHOTO]
 });
 ```
-Aquí tenemos [el resultado](getting-started/02.html).
+Aquí tenemos [el resultado](getting-started/02.html). `SITNA.Consts.layer.IGN_ES_ORTHOPHOTO` es una constante de la API que representa a la capa de ortofoto de uno de los servicios WMTS del IGN de España.
+
+### 3. Cambiando la extensión inicial del mapa
+Supongamos que queremos crear un visor centrado en la Unión Europea. Lo podemos hacer pasándole los valores adecuados a la opción `initialExtent`. Estos son cuatro coordenadas indicando los límites hacia el oeste, sur, este y norte de la extensión inicial del mapa. Dado que por defecto los mapas de la API SITNA utilizan el sistema de referencia de coordenadas EPSG:25830 (uno de los oficiales en la Península Ibérica), hay que introducir las coordenadas en ese sistema de referencia.
+
+```javascript
+const myMap = new SITNA.Map("mapa", {
+    baseLayers: [SITNA.Consts.layer.IGN_ES_ORTHOPHOTO],
+    initialExtent: [-1300000, 2900000, 3500000, 8300000]
+});
+```
+El visor tiene ahora [este aspecto](getting-started/03.html).
