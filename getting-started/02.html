@@ -1,0 +1,16 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Cambiando el mapa de fondo</title>
+</head>
+<body>
+    <script src="//sitna.navarra.es/api/"></script>
+    <div id="mapa"></div>
+    <script>
+        const myMap = new SITNA.Map("mapa", {
+            baseLayers: [SITNA.Consts.layer.IGN_ES_ORTHOPHOTO]
+        });
+    </script>
+</body>
+</html>
