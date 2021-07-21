@@ -220,3 +220,58 @@ const myMap = new SITNA.Map("mapa", {
 });
 ```
 Si abrimos ahora [el visor](getting-started/08.html), veremos que en "capas cargadas" tendremos una lista ordenada y ordenable de las capas de trabajo.
+
+### 9. Añadiendo marcadores
+Supongamos que queremos añadir al mapa una colección de puntos de interés. Podemos hacerlo añadiendo marcadores geográficos. Para ello, usamos el método `addMarker`, pasándole como parámetro las coordenadas del punto (en el sistema de referencia de coordenadas del mapa, en este caso, EPSG:3857):
+
+```javascript
+const myMap = new SITNA.Map("mapa", {
+    baseLayers: [
+        SITNA.Consts.layer.MAPBOX_SATELLITE,
+        SITNA.Consts.layer.MAPBOX_STREETS,
+        SITNA.Consts.layer.CARTO_LIGHT,
+        SITNA.Consts.layer.CARTO_DARK
+    ],
+    crs: "EPSG:3857",
+    initialExtent: [-8916022, 3179736, 9869141, 11789603],
+    workLayers: [
+        {
+            id: "paises",
+            type: SITNA.Consts.layerType.WMS,
+            url: "https://bio.discomap.eea.europa.eu/arcgis/services/Internal/Basemap_EEA38_WM/MapServer/WMSServer",
+            layerNames: ["4"],
+            title: "Países del mundo"
+        },
+        {
+            id: "rios",
+            type: SITNA.Consts.layerType.VECTOR,
+            url: "data/rivers.kml",
+            title: "Ríos"
+        },
+        {
+            id: "capitales",
+            type: SITNA.Consts.layerType.VECTOR,
+            format: SITNA.Consts.mimeType.GEOJSON,
+            url: "data/capitals.json",
+            title: "Capitales del mundo"
+        }
+    ],
+    controls: {
+        TOC: false,
+        workLayerManager: {
+            div: "toc"
+        }
+    }
+});
+
+myMap.loaded(function() {
+    myMap.addMarker([-203288, 6652999]);
+    myMap.addMarker([1390641, 5144550]);
+    myMap.addMarker([677254, 6581543]);
+    myMap.addMarker([-399432, 4463713]);
+    myMap.addMarker([-720856, 7112550]);
+    myMap.addMarker([2641252, 4575413]);
+    myMap.addMarker([236074, 6241789]);
+});
+```
+Se ha añadido [un conjunto de marcadores](getting-started/09.html).
