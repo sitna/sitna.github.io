@@ -266,7 +266,7 @@ const myMap = new SITNA.Map("mapa", {
     }
 });
 
-myMap.loaded(function() {
+myMap.loaded(() => {
     myMap.addMarker([-203288, 6652999]);
     myMap.addMarker([1390641, 5144550]);
     myMap.addMarker([677254, 6581543]);
@@ -277,3 +277,66 @@ myMap.loaded(function() {
 });
 ```
 Así se ha añadido [un conjunto de marcadores](getting-started/09.html) representando puntos de interés.
+
+### 10. Creando la capa para los marcadores
+Si no se especifica nada más que las coordenadas en la llamada la método `addMarker`, la API SITNA crea una capa de tipo `SITNA.Consts.layerType.VECTOR` para añadir a ella los marcadores. Por eso, si revisamos cómo está el visor actualmente, veremos que en "capas cargadas" hay una nueva capa con título "Vectores" que contiene los marcadores que hemos añadido. 
+
+Pero generalmente nos interesa añadir los marcadores a una capa concreta, así que vamos a hacer eso: añadiremos una capa al mapa y cuando esté lista añadiremos los marcadores a ella.
+
+```javascript
+const myMap = new SITNA.Map("mapa", {
+    baseLayers: [
+        SITNA.Consts.layer.MAPBOX_SATELLITE,
+        SITNA.Consts.layer.MAPBOX_STREETS,
+        SITNA.Consts.layer.CARTO_LIGHT,
+        SITNA.Consts.layer.CARTO_DARK
+    ],
+    crs: "EPSG:3857",
+    initialExtent: [-8916022, 3179736, 9869141, 11789603],
+    workLayers: [
+        {
+            id: "paises",
+            type: SITNA.Consts.layerType.WMS,
+            url: "https://bio.discomap.eea.europa.eu/arcgis/services/Internal/Basemap_EEA38_WM/MapServer/WMSServer",
+            layerNames: ["4"],
+            title: "Países del mundo"
+        },
+        {
+            id: "rios",
+            type: SITNA.Consts.layerType.VECTOR,
+            url: "data/rivers.kml",
+            title: "Ríos"
+        },
+        {
+            id: "capitales",
+            type: SITNA.Consts.layerType.VECTOR,
+            format: SITNA.Consts.mimeType.GEOJSON,
+            url: "data/capitals.json",
+            title: "Capitales del mundo"
+        }
+    ],
+    controls: {
+        TOC: false,
+        workLayerManager: {
+            div: "toc"
+        }
+    }
+});
+
+myMap.loaded(() => {
+    myMap.addLayer({
+        id: "poi",
+        type: SITNA.Consts.layerType.VECTOR,
+        title: "Puntos de interés"
+    }, () => {
+        myMap.addMarker([-203288, 6652999], { layer: "poi" });
+        myMap.addMarker([1390641, 5144550], { layer: "poi" });
+        myMap.addMarker([677254, 6581543], { layer: "poi" });
+        myMap.addMarker([-399432, 4463713], { layer: "poi" });
+        myMap.addMarker([-720856, 7112550], { layer: "poi" });
+        myMap.addMarker([2641252, 4575413], { layer: "poi" });
+        myMap.addMarker([236074, 6241789], { layer: "poi" });
+    });
+});
+```
+Ahora [los marcadores están en la capa "Puntos de interés"](getting-started/10.html).
