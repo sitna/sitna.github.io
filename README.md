@@ -63,6 +63,7 @@ Supongamos que queremos crear un visor centrado en la Unión Europea. Lo podemos
 ```javascript
 const myMap = new SITNA.Map("mapa", {
     baseLayers: [SITNA.Consts.layer.IGN_ES_ORTHOPHOTO],
+    // Establecemos la extensión inicial [xmin, ymin, xmax, ymax]
     initialExtent: [-1300000, 2900000, 3500000, 8300000]
 });
 ```
@@ -75,13 +76,16 @@ Pero antes de hacer el cambio, hay que tener en cuenta que esas capas solamente 
 
 ```javascript
 const myMap = new SITNA.Map("mapa", {
+    // Establecemos cuatro capas para el fondo, por defecto la imagen satélite ofrecida por Mapbox
     baseLayers: [
         SITNA.Consts.layer.MAPBOX_SATELLITE,
         SITNA.Consts.layer.MAPBOX_STREETS,
         SITNA.Consts.layer.CARTO_LIGHT,
         SITNA.Consts.layer.CARTO_DARK
     ],
+    // Establecemos el sistema de referencia de coordenadas (CRS)
     crs: "EPSG:3857",
+    // Las coordenadas deben estar en EPSG:3857
     initialExtent: [-8916022, 3179736, 9869141, 11789603]
 });
 ```
@@ -100,6 +104,7 @@ const myMap = new SITNA.Map("mapa", {
     ],
     crs: "EPSG:3857",
     initialExtent: [-8916022, 3179736, 9869141, 11789603],
+    // Añadimos una capa de trabajo de tipo WMS
     workLayers: [
         {
             id: "paises",
@@ -131,7 +136,9 @@ const myMap = new SITNA.Map("mapa", {
             id: "paises",
             type: SITNA.Consts.layerType.WMS,
             url: "https://bio.discomap.eea.europa.eu/arcgis/services/Internal/Basemap_EEA38_WM/MapServer/WMSServer",
+            // Dejamos solamente la capa de fronteras del servicio
             layerNames: ["4"],
+            // Le ponemos un título a la capa
             title: "Países del mundo"
         }
     ]
