@@ -110,3 +110,29 @@ const myMap = new SITNA.Map("mapa", {
 ```
 Y ya tenemos [los países en el mapa](getting-started/05.html). Si pulsas sobre un país, enviarás una consulta `GetFeatureInfo` al servicio WMS y obtendrás información relevante.
 Los valores de la opción `layerNames` se han obtenido del [documento de capacidades del servicio WMS](https://bio.discomap.eea.europa.eu/arcgis/services/Internal/Basemap_EEA38_WM/MapServer/WMSServer?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities).
+
+### 6. Ajustando las capas de trabajo
+Tal como está el visor ahora, tenemos información de los países, pero ya no se ve la ortofotografía. Además, si miramos en las herramientas vemos que la capa cargada tiene un nombre poco amigable. Vamos a dejar solo las fronteras y vamos a poner un título a la capa:
+
+```javascript
+const myMap = new SITNA.Map("mapa", {
+    baseLayers: [
+        SITNA.Consts.layer.MAPBOX_SATELLITE,
+        SITNA.Consts.layer.MAPBOX_STREETS,
+        SITNA.Consts.layer.CARTO_LIGHT,
+        SITNA.Consts.layer.CARTO_DARK
+    ],
+    crs: "EPSG:3857",
+    initialExtent: [-8916022, 3179736, 9869141, 11789603],
+    workLayers: [
+        {
+            id: "paises",
+            type: SITNA.Consts.layerType.WMS,
+            url: "https://bio.discomap.eea.europa.eu/arcgis/services/Internal/Basemap_EEA38_WM/MapServer/WMSServer",
+            layerNames: ["4"],
+            title: "Países del mundo"
+        }
+    ]
+});
+```
+El resultado [es este](getting-started/06.html).
