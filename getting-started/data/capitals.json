@@ -1,0 +1,2172 @@
+{
+    "type": "FeatureCollection",
+    "features": [{
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-77.0319900000008, 38.89037000000055]
+            },
+            "properties": {
+                "name": "Washington, DC",
+                "description": "United States of America"
+            },
+            "id": "1146"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-75.69188000000005, 45.421480000000116]
+            },
+            "properties": {
+                "name": "Ottawa, ON",
+                "description": "Canada"
+            },
+            "id": "1147"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [69.19520000000271, 34.515499999998944]
+            },
+            "properties": {
+                "name": "Kabul",
+                "description": "Afghanistan"
+            },
+            "id": "1148"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [19.817223000000002, 41.331655999999995]
+            },
+            "properties": {
+                "name": "Tirana",
+                "description": "Albania"
+            },
+            "id": "1149"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [3.0596999999999928, 36.7755]
+            },
+            "properties": {
+                "name": "Algiers",
+                "description": "Algeria"
+            },
+            "id": "1150"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [1.5218029999999951, 42.507502]
+            },
+            "properties": {
+                "name": "Andorra la Vella",
+                "description": "Andorra"
+            },
+            "id": "1151"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [13.23056, -8.81593]
+            },
+            "properties": {
+                "name": "Luanda",
+                "description": "Angola"
+            },
+            "id": "1152"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-61.84555699999677, 17.117527999994937]
+            },
+            "properties": {
+                "name": "Saint John's",
+                "description": "Antigua and Barbuda"
+            },
+            "id": "1153"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-58.4173089999999, -34.61178100000004]
+            },
+            "properties": {
+                "name": "Buenos Aires",
+                "description": "Argentina"
+            },
+            "id": "1154"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [44.50899899999998, 40.159589999999994]
+            },
+            "properties": {
+                "name": "Yerevan",
+                "description": "Armenia"
+            },
+            "id": "1155"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [149.12858, -35.282040000000016]
+            },
+            "properties": {
+                "name": "Canberra ACT",
+                "description": "Australia"
+            },
+            "id": "1156"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [16.37277799999999, 48.209205999999995]
+            },
+            "properties": {
+                "name": "Vienna",
+                "description": "Austria"
+            },
+            "id": "1157"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [49.89322599999997, 40.383439999999986]
+            },
+            "properties": {
+                "name": "Baku",
+                "description": "Azerbaijan"
+            },
+            "id": "1158"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-77.33902499996753, 25.066126999911237]
+            },
+            "properties": {
+                "name": "Nassau",
+                "description": "Bahamas"
+            },
+            "id": "1159"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [50.535400000000294, 26.192100000000035]
+            },
+            "properties": {
+                "name": "Manama",
+                "description": "Bahrain"
+            },
+            "id": "1160"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [90.3978000015797, 23.71060000019182]
+            },
+            "properties": {
+                "name": "Dhaka",
+                "description": "Bangladesh"
+            },
+            "id": "1161"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-59.61049899999678, 13.093500000003308]
+            },
+            "properties": {
+                "name": "Bridgetown",
+                "description": "Barbados"
+            },
+            "id": "1162"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [27.576554999999978, 53.967786999999994]
+            },
+            "properties": {
+                "name": "Minsk",
+                "description": "Belarus"
+            },
+            "id": "1163"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [4.367611999999992, 50.837051]
+            },
+            "properties": {
+                "name": "Brussels",
+                "description": "Belgium"
+            },
+            "id": "1164"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-88.77133798755504, 17.253421072513586]
+            },
+            "properties": {
+                "name": "Belmopan",
+                "description": "Belize"
+            },
+            "id": "1165"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [2.632300000000001, 6.4779]
+            },
+            "properties": {
+                "name": "Porto-Novo",
+                "description": "Benin"
+            },
+            "id": "1166"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [89.67300000023094, 27.440499999902485]
+            },
+            "properties": {
+                "name": "Thimphu",
+                "description": "Bhutan"
+            },
+            "id": "1167"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-65.2558820000099, -19.042138999989767]
+            },
+            "properties": {
+                "name": "Sucre",
+                "description": "Bolivia (Legal Capital)"
+            },
+            "id": "1168"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-68.14624800002585, -16.499009999933907]
+            },
+            "properties": {
+                "name": "La Paz",
+                "description": "Bolivia (Administrative Capital)"
+            },
+            "id": "1169"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [18.421360000000004, 43.86075099999999]
+            },
+            "properties": {
+                "name": "Sarajevo",
+                "description": "Bosnia and Herzegovina"
+            },
+            "id": "1170"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [25.908899999999996, -24.656999999999996]
+            },
+            "properties": {
+                "name": "Gaborone",
+                "description": "Botswana"
+            },
+            "id": "1171"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-47.92916999999994, -15.780148000000048]
+            },
+            "properties": {
+                "name": "Brasília - DF",
+                "description": "Brazil"
+            },
+            "id": "1172"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [114.94249999991439, 4.943099999930026]
+            },
+            "properties": {
+                "name": "Bandar Seri Begawan",
+                "description": "Brunei Darussalam"
+            },
+            "id": "1173"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [23.323826999999987, 42.71054299999999]
+            },
+            "properties": {
+                "name": "Sofia",
+                "description": "Bulgaria"
+            },
+            "id": "1174"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-1.5352000000000072, 12.356900000000001]
+            },
+            "properties": {
+                "name": "Ouagadougou",
+                "description": "Burkina Faso"
+            },
+            "id": "1175"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [96.14189999688234, 16.86699997284595]
+            },
+            "properties": {
+                "name": "Rangoon",
+                "description": "Myanmar (Burma)"
+            },
+            "id": "1176"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [29.362230000000007, -3.3817999999999984]
+            },
+            "properties": {
+                "name": "Bujumbura",
+                "description": "Burundi"
+            },
+            "id": "1177"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [104.89840000063575, 11.54339999352315]
+            },
+            "properties": {
+                "name": "Phnom Penh",
+                "description": "Cambodia"
+            },
+            "id": "1178"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [11.521700000000001, 3.8612]
+            },
+            "properties": {
+                "name": "Yaoundé",
+                "description": "Cameroon"
+            },
+            "id": "1179"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-23.515300000000007, 14.919499999999992]
+            },
+            "properties": {
+                "name": "Praia",
+                "description": "Cape Verde"
+            },
+            "id": "1180"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [21.640659, 5.630556]
+            },
+            "properties": {
+                "name": "Bangui",
+                "description": "Central African Republic"
+            },
+            "id": "1181"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [15.035500000000003, 12.112100000000002]
+            },
+            "properties": {
+                "name": "N'Djamena",
+                "description": "Chad"
+            },
+            "id": "1182"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-70.64199699999976, -33.46911999999846]
+            },
+            "properties": {
+                "name": "Santiago",
+                "description": "Chile"
+            },
+            "id": "1183"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [116.39583300000002, 39.905555999999905]
+            },
+            "properties": {
+                "name": "Beijing",
+                "description": "China"
+            },
+            "id": "1184"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-74.09626801994557, 4.6473020023940235]
+            },
+            "properties": {
+                "name": "Bogotá",
+                "description": "Colombia"
+            },
+            "id": "1185"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [43.24120000000006, -11.700400000000107]
+            },
+            "properties": {
+                "name": "Moroni",
+                "description": "Comoros"
+            },
+            "id": "1186"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [15.32705, -4.336899999999999]
+            },
+            "properties": {
+                "name": "Kinshasa",
+                "description": "Democratic Republic of The Congo"
+            },
+            "id": "1187"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [15.266200000000005, -4.276699999999999]
+            },
+            "properties": {
+                "name": "Brazzaville",
+                "description": "Congo"
+            },
+            "id": "1188"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-84.10018749239201, 9.940205080789708]
+            },
+            "properties": {
+                "name": "San José",
+                "description": "Costa Rica"
+            },
+            "id": "1189"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-5.2996000000000025, 6.839400000000001]
+            },
+            "properties": {
+                "name": "Yamoussoukro",
+                "description": "Côte d'Ivoire"
+            },
+            "id": "1190"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [15.97850099999999, 45.815005]
+            },
+            "properties": {
+                "name": "Zagreb",
+                "description": "Croatia"
+            },
+            "id": "1191"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-82.3666670006485, 23.133332999702883]
+            },
+            "properties": {
+                "name": "Havana",
+                "description": "Cuba"
+            },
+            "id": "1192"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [33.373621, 35.16760399999999]
+            },
+            "properties": {
+                "name": "Nicosia",
+                "description": "Cyprus"
+            },
+            "id": "1193"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [14.420459999999986, 50.087811]
+            },
+            "properties": {
+                "name": "Prague",
+                "description": "Czech Republic"
+            },
+            "id": "1194"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [12.568116000000016, 55.676293999999984]
+            },
+            "properties": {
+                "name": "Copenhagen",
+                "description": "Denmark"
+            },
+            "id": "1195"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [43.14250000000007, 11.580600000000102]
+            },
+            "properties": {
+                "name": "Djibouti",
+                "description": "Djibouti"
+            },
+            "id": "1196"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-61.39002999999336, 15.297605999998243]
+            },
+            "properties": {
+                "name": "Roseau",
+                "description": "Dominica"
+            },
+            "id": "1197"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-69.89078400008717, 18.479013999998564]
+            },
+            "properties": {
+                "name": "Santo Domingo de Guzman",
+                "description": "Dominican Republic"
+            },
+            "id": "1198"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [125.58799999999907, -8.566190000000164]
+            },
+            "properties": {
+                "name": "Dili",
+                "description": "Timor-Leste"
+            },
+            "id": "1199"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-78.5242759358704, -0.229497768011804]
+            },
+            "properties": {
+                "name": "Quito",
+                "description": "Ecuador"
+            },
+            "id": "1200"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [31.2272, 30.057099999999984]
+            },
+            "properties": {
+                "name": "Cairo",
+                "description": "Egypt"
+            },
+            "id": "1201"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-89.20733032182603, 13.703417275443242]
+            },
+            "properties": {
+                "name": "San Salvador",
+                "description": "El Salvador"
+            },
+            "id": "1202"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [8.774099999999999, 3.7523]
+            },
+            "properties": {
+                "name": "Malabo",
+                "description": "Equatorial Guinea"
+            },
+            "id": "1203"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [38.918299999999995, 15.331500000000025]
+            },
+            "properties": {
+                "name": "Asmara",
+                "description": "Eritrea"
+            },
+            "id": "1204"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [24.75447200000001, 59.43886199999999]
+            },
+            "properties": {
+                "name": "Tallinn",
+                "description": "Estonia"
+            },
+            "id": "1205"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [38.75933000000002, 9.011569999999995]
+            },
+            "properties": {
+                "name": "Addis Ababa",
+                "description": "Ethiopia"
+            },
+            "id": "1206"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [178.3841, -18.087689999999988]
+            },
+            "properties": {
+                "name": "Suva",
+                "description": "Fiji"
+            },
+            "id": "1207"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [24.938407999999995, 60.16987899999999]
+            },
+            "properties": {
+                "name": "Helsinki",
+                "description": "Finland"
+            },
+            "id": "1208"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [2.3509870000000017, 48.856667]
+            },
+            "properties": {
+                "name": "Paris",
+                "description": "France"
+            },
+            "id": "1209"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [9.4496, 0.3857999999999999]
+            },
+            "properties": {
+                "name": "Libreville",
+                "description": "Gabon"
+            },
+            "id": "1210"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-16.677500000000006, 13.43988]
+            },
+            "properties": {
+                "name": "Banjul",
+                "description": "Gambia"
+            },
+            "id": "1211"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [44.792997999999976, 41.709981000000006]
+            },
+            "properties": {
+                "name": "Tbilisi",
+                "description": "Georgia"
+            },
+            "id": "1212"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [13.411494000000003, 52.52347999999999]
+            },
+            "properties": {
+                "name": "Berlin",
+                "description": "Germany"
+            },
+            "id": "1213"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-0.20738000000000362, 5.540090000000001]
+            },
+            "properties": {
+                "name": "Accra",
+                "description": "Ghana"
+            },
+            "id": "1214"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [23.716647, 37.97918000000001]
+            },
+            "properties": {
+                "name": "Athens",
+                "description": "Greece"
+            },
+            "id": "1215"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-61.74861399999316, 12.053968000009919]
+            },
+            "properties": {
+                "name": "St Georges",
+                "description": "Grenada"
+            },
+            "id": "1216"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-90.5328173235716, 14.624795374953816]
+            },
+            "properties": {
+                "name": "Guatemala",
+                "description": "Guatemala"
+            },
+            "id": "1217"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-13.678469999999995, 9.537028999999997]
+            },
+            "properties": {
+                "name": "Conakry",
+                "description": "Guinea"
+            },
+            "id": "1218"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-15.587499999999993, 11.8598]
+            },
+            "properties": {
+                "name": "Bissau",
+                "description": "Guinea-Bissau"
+            },
+            "id": "1219"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-58.154831000004286, 6.8046109999986335]
+            },
+            "properties": {
+                "name": "Georgetown",
+                "description": "Guyana"
+            },
+            "id": "1220"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-72.32878900016517, 18.539208000123242]
+            },
+            "properties": {
+                "name": "Port-au-Prince",
+                "description": "Haiti"
+            },
+            "id": "1221"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [12.458131, 41.90225699999999]
+            },
+            "properties": {
+                "name": "Vatican City",
+                "description": "Holy See"
+            },
+            "id": "1222"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-87.46666725515202, 15.133333085715233]
+            },
+            "properties": {
+                "name": "Tegucigalpa",
+                "description": "Honduras"
+            },
+            "id": "1223"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [19.04075899999999, 47.498403]
+            },
+            "properties": {
+                "name": "Budapest",
+                "description": "Hungary"
+            },
+            "id": "1224"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-21.89520999999999, 64.135338]
+            },
+            "properties": {
+                "name": "Reykjavik",
+                "description": "Iceland"
+            },
+            "id": "1225"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [77.224960000046, 28.635308000054312]
+            },
+            "properties": {
+                "name": "New Delhi, Delhi",
+                "description": "India"
+            },
+            "id": "1226"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [106.80629999512612, -6.186190007065976]
+            },
+            "properties": {
+                "name": "Jakarta",
+                "description": "Indonesia"
+            },
+            "id": "1227"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [51.435799999999915, 35.70610000000001]
+            },
+            "properties": {
+                "name": "Tehran",
+                "description": "Iran"
+            },
+            "id": "1228"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [44.3922, 33.31570000000003]
+            },
+            "properties": {
+                "name": "Baghdad",
+                "description": "Iraq"
+            },
+            "id": "1229"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-6.267494000000002, 53.344104]
+            },
+            "properties": {
+                "name": "Dublin, Co. Dublin",
+                "description": "Ireland"
+            },
+            "id": "1230"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [34.7595, 32.0554]
+            },
+            "properties": {
+                "name": "Tel Aviv",
+                "description": "Israel"
+            },
+            "id": "1231"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [12.482323999999991, 41.895466]
+            },
+            "properties": {
+                "name": "Rome",
+                "description": "Italy"
+            },
+            "id": "1232"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-76.79200899953435, 17.992731001186254]
+            },
+            "properties": {
+                "name": "Kingston",
+                "description": "Jamaica"
+            },
+            "id": "1233"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [139.68228199999996, 35.678451000000024]
+            },
+            "properties": {
+                "name": "Tokyo",
+                "description": "Japan"
+            },
+            "id": "1234"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [35.93489999999999, 31.9394]
+            },
+            "properties": {
+                "name": "Amman",
+                "description": "Jordan"
+            },
+            "id": "1235"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [71.44749999999998, 51.17960000000002]
+            },
+            "properties": {
+                "name": "Astana",
+                "description": "Kazakhstan"
+            },
+            "id": "1236"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [36.79649999999999, -1.2761999999999922]
+            },
+            "properties": {
+                "name": "Nairobi",
+                "description": "Kenya"
+            },
+            "id": "1237"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [173.1558, 1.3645000000000147]
+            },
+            "properties": {
+                "name": "Tarawa",
+                "description": "Kiribati"
+            },
+            "id": "1238"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [125.74680000000004, 39.018699999999995]
+            },
+            "properties": {
+                "name": "North Korea",
+                "description": "Pyongyang"
+            },
+            "id": "1239"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [126.9828, 37.513900000000014]
+            },
+            "properties": {
+                "name": "South Korea",
+                "description": "Seoul"
+            },
+            "id": "1240"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [47.98240000000006, 29.37210000000007]
+            },
+            "properties": {
+                "name": "Kuwait",
+                "description": "Kuwait"
+            },
+            "id": "1241"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [74.59839999999981, 42.867900000000326]
+            },
+            "properties": {
+                "name": "Bishkek",
+                "description": "Kyrgyzstan"
+            },
+            "id": "1242"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [102.61370000091, 17.968900001335133]
+            },
+            "properties": {
+                "name": "Vientiane",
+                "description": "Laos"
+            },
+            "id": "1243"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [24.104849999999995, 56.946538]
+            },
+            "properties": {
+                "name": "Riga",
+                "description": "Latvia"
+            },
+            "id": "1244"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [35.513403999999994, 33.887189000000006]
+            },
+            "properties": {
+                "name": "Beirut",
+                "description": "Lebanon"
+            },
+            "id": "1245"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [27.485400000000002, -29.297599999999985]
+            },
+            "properties": {
+                "name": "Maseru",
+                "description": "Lesotho"
+            },
+            "id": "1246"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-10.794300000000005, 6.299999999999999]
+            },
+            "properties": {
+                "name": "Monrovia",
+                "description": "Liberia"
+            },
+            "id": "1247"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [13.179939999999998, 32.884599999999985]
+            },
+            "properties": {
+                "name": "Tripoli",
+                "description": "Libya"
+            },
+            "id": "1248"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [9.521482000000004, 47.141075999999984]
+            },
+            "properties": {
+                "name": "Vaduz",
+                "description": "Liechtenstein"
+            },
+            "id": "1249"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [25.27993499999999, 54.689630999999984]
+            },
+            "properties": {
+                "name": "Vilnius",
+                "description": "Lithuania"
+            },
+            "id": "1250"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [6.129596, 49.610003999999996]
+            },
+            "properties": {
+                "name": "Luxemburg City",
+                "description": "Luxembourg"
+            },
+            "id": "1251"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [21.436097000000007, 42.002410999999995]
+            },
+            "properties": {
+                "name": "Skopje",
+                "description": "Macedonia"
+            },
+            "id": "1252"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [49.716666999999504, -13.366667000000938]
+            },
+            "properties": {
+                "name": "Antananarivo",
+                "description": "Madagascar"
+            },
+            "id": "1253"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [33.77032, -13.989900000000011]
+            },
+            "properties": {
+                "name": "Lilongwe",
+                "description": "Malawi"
+            },
+            "id": "1254"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [101.70770237896714, 3.150209802742915]
+            },
+            "properties": {
+                "name": "Kuala Lumpur",
+                "description": "Malaysia"
+            },
+            "id": "1255"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [73.51091596191401, 4.174200189411058]
+            },
+            "properties": {
+                "name": "Male",
+                "description": "Maldives"
+            },
+            "id": "1256"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-7.9429599999999985, 12.584539999999997]
+            },
+            "properties": {
+                "name": "Bamako",
+                "description": "Mali"
+            },
+            "id": "1257"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [14.518906999999992, 35.904171]
+            },
+            "properties": {
+                "name": "Valletta",
+                "description": "Malta"
+            },
+            "id": "1258"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [171.13456, 7.110464000000022]
+            },
+            "properties": {
+                "name": "Majuro",
+                "description": "Marshall Islands"
+            },
+            "id": "1259"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-16.020999999999997, 18.316799999999997]
+            },
+            "properties": {
+                "name": "Nouakchott",
+                "description": "Mauritania"
+            },
+            "id": "1260"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [57.48960000000473, -20.16539999999584]
+            },
+            "properties": {
+                "name": "Port Louis",
+                "description": "Mauritius"
+            },
+            "id": "1261"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-99.12757099254496, 19.42705001016992]
+            },
+            "properties": {
+                "name": "Mexico",
+                "description": "Mexico"
+            },
+            "id": "1262"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [158.185444, 6.917708999999994]
+            },
+            "properties": {
+                "name": "Palikir",
+                "description": "Micronesia"
+            },
+            "id": "1263"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [28.849741999999992, 47.016717]
+            },
+            "properties": {
+                "name": "Kishinev",
+                "description": "Moldova"
+            },
+            "id": "1264"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [7.418906999999997, 43.732529]
+            },
+            "properties": {
+                "name": "Monaco",
+                "description": "Monaco"
+            },
+            "id": "1265"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [106.922, 47.913800000000045]
+            },
+            "properties": {
+                "name": "Ulan Bator",
+                "description": "Mongolia"
+            },
+            "id": "1266"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-6.870399999999994, 33.9905]
+            },
+            "properties": {
+                "name": "Rabat",
+                "description": "Morocco"
+            },
+            "id": "1267"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [32.5804, -25.968599999999988]
+            },
+            "properties": {
+                "name": "Maputo",
+                "description": "Mozambique"
+            },
+            "id": "1268"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [17.080500000000004, -22.574899999999996]
+            },
+            "properties": {
+                "name": "Windhoek",
+                "description": "Namibia"
+            },
+            "id": "1269"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [166.911617, -0.5471890000000316]
+            },
+            "properties": {
+                "name": "Yaren District",
+                "description": "Nauru"
+            },
+            "id": "1270"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [85.3156999998486, 27.705799999841414]
+            },
+            "properties": {
+                "name": "Kathmandu",
+                "description": "Nepal"
+            },
+            "id": "1271"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [4.890950999999989, 52.373811999999994]
+            },
+            "properties": {
+                "name": "Amsterdam",
+                "description": "The Netherlands"
+            },
+            "id": "1272"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [174.776217, -41.28648]
+            },
+            "properties": {
+                "name": "Wellington, Wellington",
+                "description": "New Zealand"
+            },
+            "id": "1273"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-86.27338983495673, 12.147458187916916]
+            },
+            "properties": {
+                "name": "Managua",
+                "description": "Nicaragua"
+            },
+            "id": "1274"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [2.0667699999999947, 13.545079999999999]
+            },
+            "properties": {
+                "name": "Niamey",
+                "description": "Niger"
+            },
+            "id": "1275"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [7.48906100000001, 9.058035999999996]
+            },
+            "properties": {
+                "name": "Abuja",
+                "description": "Nigeria"
+            },
+            "id": "1276"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [10.738740999999996, 59.91382]
+            },
+            "properties": {
+                "name": "Oslo",
+                "description": "Norway"
+            },
+            "id": "1277"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [58.59220000000377, 23.608600000002426]
+            },
+            "properties": {
+                "name": "Muscat",
+                "description": "Oman"
+            },
+            "id": "1278"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [73.13333300001437, 31.500000000000927]
+            },
+            "properties": {
+                "name": "Islamabad",
+                "description": "Pakistan"
+            },
+            "id": "1279"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [134.48460399999993, 7.343782000000004]
+            },
+            "properties": {
+                "name": "Koror",
+                "description": "Palau"
+            },
+            "id": "1280"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-79.51879200491484, 8.994268754334133]
+            },
+            "properties": {
+                "name": "Panamá City",
+                "description": "Panama"
+            },
+            "id": "1281"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [147.1969, -9.465590000000017]
+            },
+            "properties": {
+                "name": "Port Moresby",
+                "description": "Papua New Guinea"
+            },
+            "id": "1282"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-57.63623100000047, -25.300494000000015]
+            },
+            "properties": {
+                "name": "Asunción",
+                "description": "Paraguay"
+            },
+            "id": "1283"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-77.04649101186092, -12.093083990423214]
+            },
+            "properties": {
+                "name": "Lima",
+                "description": "Peru"
+            },
+            "id": "1284"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [120.97260000000301, 14.57900000000094]
+            },
+            "properties": {
+                "name": "Manila",
+                "description": "Philippines"
+            },
+            "id": "1285"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [21.01222899999999, 52.22967599999999]
+            },
+            "properties": {
+                "name": "Warsaw",
+                "description": "Poland"
+            },
+            "id": "1286"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-9.135517, 38.707162999999994]
+            },
+            "properties": {
+                "name": "Lisbon",
+                "description": "Portugal"
+            },
+            "id": "1287"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [51.50820000000045, 25.2948]
+            },
+            "properties": {
+                "name": "Doha",
+                "description": "Qatar"
+            },
+            "id": "1288"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [55.46030000000193, -20.873199999997933]
+            },
+            "properties": {
+                "name": "Saint-Denis",
+                "description": "Reunion"
+            },
+            "id": "1289"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [26.097878999999992, 44.447924]
+            },
+            "properties": {
+                "name": "Bucharest",
+                "description": "Romania"
+            },
+            "id": "1290"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [37.617632999999984, 55.755786000000015]
+            },
+            "properties": {
+                "name": "Moscow",
+                "description": "Russian Federation"
+            },
+            "id": "1291"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [30.06188, -1.9441299999999988]
+            },
+            "properties": {
+                "name": "Kigali",
+                "description": "Rwanda"
+            },
+            "id": "1292"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-62.71376899999717, 17.2968479999926]
+            },
+            "properties": {
+                "name": "Basseterre",
+                "description": "Saint Kitts & Nevis"
+            },
+            "id": "1293"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-61.001757999993195, 13.997224000001982]
+            },
+            "properties": {
+                "name": "Castries",
+                "description": "Saint Lucia"
+            },
+            "id": "1294"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-61.26528199999266, 13.2034700000046]
+            },
+            "properties": {
+                "name": "Kingstown",
+                "description": "Saint Vincent and the Grenadines"
+            },
+            "id": "1295"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-171.751801, -13.831419999999992]
+            },
+            "properties": {
+                "name": "Apia",
+                "description": "Samoa"
+            },
+            "id": "1296"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [12.448626000000004, 43.93215599999999]
+            },
+            "properties": {
+                "name": "San Marino",
+                "description": "San Marino"
+            },
+            "id": "1297"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [6.731100000000002, 0.33599999999999997]
+            },
+            "properties": {
+                "name": "São Tomé",
+                "description": "São Tomé and Príncipe"
+            },
+            "id": "1298"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [46.6977000000001, 24.674799999999912]
+            },
+            "properties": {
+                "name": "Riyadh",
+                "description": "Saudi Arabia"
+            },
+            "id": "1299"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-17.439780000000003, 14.742079999999998]
+            },
+            "properties": {
+                "name": "Dakar",
+                "description": "Senegal"
+            },
+            "id": "1300"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [20.47810099999998, 44.804756000000005]
+            },
+            "properties": {
+                "name": "Belgrade",
+                "description": "Serbia"
+            },
+            "id": "1301"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [55.446600000010264, -4.630899999981897]
+            },
+            "properties": {
+                "name": "Victoria",
+                "description": "Seychelles"
+            },
+            "id": "1302"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-13.26589, 8.469660000000001]
+            },
+            "properties": {
+                "name": "Freetown",
+                "description": "Sierra Leone"
+            },
+            "id": "1303"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [103.84996206927214, 1.2894068843217905]
+            },
+            "properties": {
+                "name": "Singapore",
+                "description": "Singapore"
+            },
+            "id": "1304"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [17.154703999999995, 48.211625999999995]
+            },
+            "properties": {
+                "name": "Bratislava",
+                "description": "Slovakia"
+            },
+            "id": "1305"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [14.505965, 46.05142599999999]
+            },
+            "properties": {
+                "name": "Ljubljana",
+                "description": "Slovenia"
+            },
+            "id": "1306"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [159.948735, -9.426761000000038]
+            },
+            "properties": {
+                "name": "Honiara",
+                "description": "Solomon Islands"
+            },
+            "id": "1307"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [45.32889999999974, 2.0834999999997446]
+            },
+            "properties": {
+                "name": "Mogadishu",
+                "description": "Somalia"
+            },
+            "id": "1308"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [28.187630000000006, -25.746290000000005]
+            },
+            "properties": {
+                "name": "Pretoria",
+                "description": "South Africa (Administrative)"
+            },
+            "id": "1309"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [18.425659999999993, -33.91975]
+            },
+            "properties": {
+                "name": "Cape Town",
+                "description": "South Africa (Legislative)"
+            },
+            "id": "1310"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-3.7032499999999993, 40.41674099999999]
+            },
+            "properties": {
+                "name": "Madrid",
+                "description": "Spain"
+            },
+            "id": "1311"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [79.85729467687305, 6.915607492129747]
+            },
+            "properties": {
+                "name": "Colombo",
+                "description": "Sri Lanka"
+            },
+            "id": "1312"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [32.53326, 15.599900000000005]
+            },
+            "properties": {
+                "name": "Khartoum",
+                "description": "Sudan"
+            },
+            "id": "1313"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-55.167880000000956, 5.823200999998921]
+            },
+            "properties": {
+                "name": "Paramaribo",
+                "description": "Suriname"
+            },
+            "id": "1314"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [31.140999999999995, -26.3186]
+            },
+            "properties": {
+                "name": "Mbabane",
+                "description": "Swaziland"
+            },
+            "id": "1315"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [18.064487999999983, 59.332787999999994]
+            },
+            "properties": {
+                "name": "Stockholm",
+                "description": "Sweden"
+            },
+            "id": "1316"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [7.4481479999999936, 46.947998999999996]
+            },
+            "properties": {
+                "name": "Bern",
+                "description": "Switzerland"
+            },
+            "id": "1317"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [36.29389999999999, 33.515800000000006]
+            },
+            "properties": {
+                "name": "Damascus",
+                "description": "Syria"
+            },
+            "id": "1318"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [121.56149799999937, 25.085320000000056]
+            },
+            "properties": {
+                "name": "Taipei City",
+                "description": "Taiwan"
+            },
+            "id": "1319"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [68.77380000000088, 38.57370000000014]
+            },
+            "properties": {
+                "name": "Dushanbe",
+                "description": "Tajikistan"
+            },
+            "id": "1320"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [36.349999999999994, -7.283332999999993]
+            },
+            "properties": {
+                "name": "Dodoma",
+                "description": "Tanzania"
+            },
+            "id": "1321"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [100.50200799110604, 13.757327023896774]
+            },
+            "properties": {
+                "name": "Bangkok",
+                "description": "Sao Chingcha, Thailand"
+            },
+            "id": "1322"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [1.2254999999999934, 6.122799999999999]
+            },
+            "properties": {
+                "name": "Lomé",
+                "description": "Togo"
+            },
+            "id": "1323"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-175.2164, -21.136008999999994]
+            },
+            "properties": {
+                "name": "Nuku'Alofa",
+                "description": "Tonga"
+            },
+            "id": "1324"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-61.47891200000013, 10.659567000012705]
+            },
+            "properties": {
+                "name": "Port-of-Spain",
+                "description": "Trinidad & Tobago"
+            },
+            "id": "1325"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [10.18871999999999, 36.80027]
+            },
+            "properties": {
+                "name": "Tunis",
+                "description": "Tunisia"
+            },
+            "id": "1326"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [32.85603399999999, 39.943872999999996]
+            },
+            "properties": {
+                "name": "Ankara",
+                "description": "Turkey"
+            },
+            "id": "1327"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [58.379399999999926, 37.95089999999984]
+            },
+            "properties": {
+                "name": "Ashgabat",
+                "description": "Turkmenistan"
+            },
+            "id": "1328"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [179.182914, -8.497752000000013]
+            },
+            "properties": {
+                "name": "Fongafale",
+                "description": "Tuvalu"
+            },
+            "id": "1329"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [32.571369999999995, 0.3132999999999996]
+            },
+            "properties": {
+                "name": "Kampala",
+                "description": "Uganda"
+            },
+            "id": "1330"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [30.53671799999999, 50.44221999999999]
+            },
+            "properties": {
+                "name": "Kiev",
+                "description": "Ukraine"
+            },
+            "id": "1331"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [54.37051000000113, 24.476431000000154]
+            },
+            "properties": {
+                "name": "Abu Dhabi",
+                "description": "United Arab Emirates"
+            },
+            "id": "1332"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-0.12623600000001034, 51.500151999999986]
+            },
+            "properties": {
+                "name": "London",
+                "description": "United Kingdom"
+            },
+            "id": "1333"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-56.06745099999994, -34.89411900000003]
+            },
+            "properties": {
+                "name": "Montevideo",
+                "description": "Uruguay"
+            },
+            "id": "1334"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [69.24810000000035, 41.31930000000022]
+            },
+            "properties": {
+                "name": "Tashkent",
+                "description": "Uzbekistan"
+            },
+            "id": "1335"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [168.320999, -17.740391000000006]
+            },
+            "properties": {
+                "name": "Port-Vila",
+                "description": "Vanuatu"
+            },
+            "id": "1336"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-66.89827699991741, 10.496050000111483]
+            },
+            "properties": {
+                "name": "Caracas",
+                "description": "Venezuela"
+            },
+            "id": "1337"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [105.8372000000937, 21.034100000141134]
+            },
+            "properties": {
+                "name": "Hanoi",
+                "description": "Vietnam"
+            },
+            "id": "1338"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-13.20162999999999, 27.162339999999997]
+            },
+            "properties": {
+                "name": "El Aaiún",
+                "description": "Western Sahara"
+            },
+            "id": "1339"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [44.208099999999895, 15.355600000000104]
+            },
+            "properties": {
+                "name": "Sanaa",
+                "description": "Yemen"
+            },
+            "id": "1340"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [28.28089999999999, -15.414500000000004]
+            },
+            "properties": {
+                "name": "Lusaka",
+                "description": "Zambia"
+            },
+            "id": "1341"
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [31.04959999999999, -17.8227]
+            },
+            "properties": {
+                "name": "Harare",
+                "description": "Zimbabwe"
+            },
+            "id": "1342"
+        }
+    ]
+}
