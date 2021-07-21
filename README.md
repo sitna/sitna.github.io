@@ -38,6 +38,7 @@ Como primer paso, creamos un documento HTML que incluya los tres elementos:
     <script src="//sitna.navarra.es/api/"></script>
     <div id="mapa"></div>
     <script>
+        // Mi primer visor
         const myMap = new SITNA.Map("mapa");
     </script>
 </body>
