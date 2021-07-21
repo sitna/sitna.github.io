@@ -1,37 +1,46 @@
-## Welcome to GitHub Pages
+# API SITNA
+API JavaScript para la visualización de datos georreferenciados en aplicaciones web.
 
-You can use the [editor on GitHub](https://github.com/sitna/sitna.github.io/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+## Documentación
+http://sitna.navarra.es/api/doc/
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Sobre la API SITNA
+La API SITNA es una API JavaScript que permite incluir en páginas y aplicaciones web un visor de mapas interactivo y así representar información georreferenciada.
 
-### Markdown
+Es un producto SITNA desarrollado para su uso en aplicaciones web de Gobierno de Navarra, pero puede ser utilizado por cualquier usuario y organización en sus páginas web.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Entre otras capacidades, la API SITNA:
+- Ofrece funciones habituales de navegación de los visores de mapas, como zoom, mapa de situación y herramientas de medición.
+- Permite buscar un municipio de Navarra por su denominación, una dirección, una parcela catastral o un punto por sus coordenadas, entre otras opciones.
+- Tiene una configuración por defecto que permite de manera fácil crear un mapa básico de Navarra, con herramientas de uso común y mapas de fondo procedentes de IDENA, como ortofotos, el mapa base, la cartografía topográfica o el catastro.
+- Es posible añadir información geográfica mediante servicios WMS y WMTS.
+- Permite crear marcadores puntuales con información asociada.
+- También es posible cargar información geográfica desde un fichero en formato KML, GeoJSON u otros.
 
-```markdown
-Syntax highlighted code block
+## Empezando a usar la API SITNA
 
-# Header 1
-## Header 2
-### Header 3
+Para incrustar un visor en una aplicación web, hacen falta tres elementos:
+- Un elemento `script` con la dirección de la API SITNA. Normalmente esta será https://sitna.navarra.es/api/.
+- Un elemento de bloque, por ejemplo un `div`, donde incrustar el visor.
+- Un elemento `script` donde se instancie un objeto de la clase `SITNA.Map`.
 
-- Bulleted
-- List
+Como primer paso, creamos un documento HTML que incluya los tres elementos:
 
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Taller API SITNA</title>
+</head>
+<body>
+    <script src="//sitna.navarra.es/api/"></script>
+    <div id="mapa"></div>
+    <script>
+        const myMap = new SITNA.Map("mapa");
+    </script>
+</body>
+</html>
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/sitna/sitna.github.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+Y así tenemos [nuestro primer visor](getting-started/01.html). Podemos observar que está centrado en Navarra y que el mapa de fondo es de un servicio WMTS de IDENA.
