@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Añadiendo archivos geográficos</title>
+</head>
+<body>
+    <script src="//sitna.navarra.es/api/"></script>
+    <div id="mapa"></div>
+    <script>
+        const myMap = new SITNA.Map("mapa", {
+            baseLayers: [
+                SITNA.Consts.layer.MAPBOX_SATELLITE,
+                SITNA.Consts.layer.MAPBOX_STREETS,
+                SITNA.Consts.layer.CARTO_LIGHT,
+                SITNA.Consts.layer.CARTO_DARK
+            ],
+            crs: "EPSG:3857",
+            initialExtent: [-8916022, 3179736, 9869141, 11789603],
+            workLayers: [
+                {
+                    id: "paises",
+                    type: SITNA.Consts.layerType.WMS,
+                    url: "https://bio.discomap.eea.europa.eu/arcgis/services/Internal/Basemap_EEA38_WM/MapServer/WMSServer",
+                    layerNames: ["4"],
+                    title: "Países del mundo"
+                },
+                {
+                    id: "rios",
+                    type: SITNA.Consts.layerType.VECTOR,
+                    url: "data/rivers.kml",
+                    title: "Ríos"
+                },
+                {
+                    id: "capitales",
+                    type: SITNA.Consts.layerType.VECTOR,
+                    format: SITNA.Consts.mimeType.GEOJSON,
+                    url: "data/capitals.json",
+                    title: "Capitales del mundo"
+                }
+            ]
+        });
+    </script>
+</body>
+</html>
