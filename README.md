@@ -167,12 +167,14 @@ const myMap = new SITNA.Map("mapa", {
             layerNames: ["4"],
             title: "Países del mundo"
         },
+        // Añadimos una capa con un archivo KML de ríos
         {
             id: "rios",
             type: SITNA.Consts.layerType.VECTOR,
             url: "data/rivers.kml",
             title: "Ríos"
         },
+        // Añadimos una capa con un archivo GeoJSON de capitales
         {
             id: "capitales",
             type: SITNA.Consts.layerType.VECTOR,
@@ -220,6 +222,7 @@ const myMap = new SITNA.Map("mapa", {
             title: "Capitales del mundo"
         }
     ],
+    // Quitamos el control TOC y añadimos el control workLayerManager dentro del elemento con identificador "toc"
     controls: {
         TOC: false,
         workLayerManager: {
@@ -275,7 +278,9 @@ const myMap = new SITNA.Map("mapa", {
     }
 });
 
+// Esperamos a que el mapa se cargue
 myMap.loaded(() => {
+    // Añadimos marcadores
     myMap.addMarker([-203288, 6652999]);
     myMap.addMarker([1390641, 5144550]);
     myMap.addMarker([677254, 6581543]);
@@ -333,11 +338,13 @@ const myMap = new SITNA.Map("mapa", {
 });
 
 myMap.loaded(() => {
+    // Creamos una capa de tipo vectorial para los marcadores
     myMap.addLayer({
         id: "poi",
         type: SITNA.Consts.layerType.VECTOR,
         title: "Puntos de interés"
     }, () => {
+        // Creamos los marcadores en la capa creada
         myMap.addMarker([-203288, 6652999], { layer: "poi" });
         myMap.addMarker([1390641, 5144550], { layer: "poi" });
         myMap.addMarker([677254, 6581543], { layer: "poi" });
@@ -401,7 +408,9 @@ myMap.loaded(() => {
     }, () => {
         myMap.addMarker([-203288, 6652999], {
             layer: "poi",
+            // Establecemos un grupo para este marcador
             group: "Prehistoria",
+            // Añadimos atributos a este marcador
             data: {
                 "Nombre": "Stonehenge",
                 "Fecha de inicio de construcción": "2400-2200 a.e.c.",
@@ -478,6 +487,7 @@ Vamos a quitar de los parámetros del constructor la configuración del visor qu
 
 ```javascript
 const myMap = new SITNA.Map("mapa", {
+    // Instanciamos el mapa con una maquetación personalizada
     layout: "layout/my-layout"
 });
 
