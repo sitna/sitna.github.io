@@ -69,7 +69,7 @@ El visor tiene ahora [este aspecto](getting-started/03.html).
 ### 4. Cambiando el sistema de referencia de coordenadas
 Podemos comprobar que el mapa de fondo que hemos elegido no es el más adecuado para mostrar un visor de la Unión Europea porque solamente cubre el territorio español, así que hay que elegir otra capa más adecuada para ello. Ya que estamos, vamos a añadir alguna más para dar al usuario la opción de tener distintos mapas de fondo. Vamos a incluir una capa de vista satélite de Mapbox y unos mapas base de Mapbox y Carto.
 
-Pero antes de hacer el cambio, hay que tener en cuenta que esas capas solamente son compatibles con el sistema de referencia de coordenadas EPSG:3587, típico de capas que tienen cobertura mundial. Por tanto, hay que utilizar la opción `crs` para establecerlo. No hay que olvidar establecer las coordenadas de `initialExtent` en el nuevo sistema de referencia de coordenadas.
+Pero antes de hacer el cambio, hay que tener en cuenta que esas capas solamente son compatibles con el sistema de referencia de coordenadas EPSG:3857, típico de capas que tienen cobertura mundial. Por tanto, hay que utilizar la opción `crs` para establecerlo. No hay que olvidar establecer las coordenadas de `initialExtent` en el nuevo sistema de referencia de coordenadas.
 
 ```javascript
 const myMap = new SITNA.Map("mapa", {
@@ -174,4 +174,49 @@ const myMap = new SITNA.Map("mapa", {
     ]
 });
 ```
-Y ya tenemos [dos capas de trabajo más](getting-started/07.html). La API SITNA intenta inferir el formato de archivo geográfico por su extensión en el nombre, por eso la capa de ríos es reconocida como un archivo KML. No obstante, se puede especificar mediante la propiedad `format`, como en la capa de capitales.
+Y ya tenemos [dos capas de trabajo más](getting-started/07.html). La API SITNA intenta inferir el formato de archivo geográfico por su extensión en el nombre, por eso la fuente de datos de la capa de ríos es reconocida como un archivo KML. No obstante, el formato se puede especificar mediante la propiedad `format`, como en la capa de capitales.
+
+### 8. Cambiando los controles de usuario
+Por defecto, la API SITNA carga con el visor una serie de controles de usuario, como la galería de mapas de fondo o un árbol de capas de trabajo. Los controles que se cargan se pueden cambiar mediante la propiedad `controls` de las opciones de configuración. Por ejemplo, vamos a quitar el árbol de capas de trabajo y en su lugar vamos a poner una tabla de contenidos como la que tiene el visor de IDENA:
+
+```javascript
+const myMap = new SITNA.Map("mapa", {
+    baseLayers: [
+        SITNA.Consts.layer.MAPBOX_SATELLITE,
+        SITNA.Consts.layer.MAPBOX_STREETS,
+        SITNA.Consts.layer.CARTO_LIGHT,
+        SITNA.Consts.layer.CARTO_DARK
+    ],
+    crs: "EPSG:3857",
+    initialExtent: [-8916022, 3179736, 9869141, 11789603],
+    workLayers: [
+        {
+            id: "paises",
+            type: SITNA.Consts.layerType.WMS,
+            url: "https://bio.discomap.eea.europa.eu/arcgis/services/Internal/Basemap_EEA38_WM/MapServer/WMSServer",
+            layerNames: ["4"],
+            title: "Países del mundo"
+        },
+        {
+            id: "rios",
+            type: SITNA.Consts.layerType.VECTOR,
+            url: "data/rivers.kml",
+            title: "Ríos"
+        },
+        {
+            id: "capitales",
+            type: SITNA.Consts.layerType.VECTOR,
+            format: SITNA.Consts.mimeType.GEOJSON,
+            url: "data/capitals.json",
+            title: "Capitales del mundo"
+        }
+    ],
+    controls: {
+        TOC: false,
+        workLayerManager: {
+            div: "toc"
+        }
+    }
+});
+```
+Si abrimos ahora [el visor](getting-started/08.html), veremos que en "capas cargadas" tendremos una lista ordenada y ordenable de las capas de trabajo.
