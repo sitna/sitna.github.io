@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'mapskin';
-    src: url('fonts/mapskin.woff') format('woff'), url('fonts/mapskin.ttf') format('truetype'), url('fonts/mapskin.svg') format('svg');
+    src: url('https://mapskincdn.appspot.com/1.0/fonts/mapskin.woff') format('woff'), url('https://mapskincdn.appspot.com/1.0/fonts/mapskin.ttf') format('truetype'), url('https://mapskincdn.appspot.com/1.0/fonts/mapskin.svg') format('svg');
     font-weight: normal;
     font-style: normal;
 }
