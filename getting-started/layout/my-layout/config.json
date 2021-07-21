@@ -29,7 +29,8 @@
     {
       "id": "capitales",
       "type": "vector",
-      "url": "data/capitals.geojson",
+      "format": "application/vnd.geo+json",
+      "url": "data/capitals.json",
       "title": "Capitales del mundo"
     }
   ],
