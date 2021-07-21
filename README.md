@@ -222,7 +222,9 @@ const myMap = new SITNA.Map("mapa", {
 Si abrimos ahora [el visor](getting-started/08.html), veremos que en "capas cargadas" tendremos una lista ordenada y ordenable de las capas de trabajo.
 
 ### 9. Añadiendo marcadores
-Supongamos que queremos añadir al mapa una colección de puntos de interés. Podemos hacerlo añadiendo marcadores geográficos. Para ello, usamos el método `addMarker`, pasándole como parámetro las coordenadas del punto (en el sistema de referencia de coordenadas del mapa, en este caso, EPSG:3857):
+Una vez configurado el visor, vamos a añadir lógica. Supongamos que queremos añadir al mapa una colección de puntos de interés. Podemos hacerlo añadiendo marcadores geográficos. Para ello, usamos el método `addMarker`, pasándole como parámetro las coordenadas del punto (en el sistema de referencia de coordenadas del mapa, en este caso, EPSG:3857). 
+
+Por otro lado, cuando se introduce lógica que afecta a elementos del mapa, es necesario meterla dentro de una función de callback que pasará como parámetro al método `loaded` del objeto de mapa. De esta forma nos aseguramos de que no se ejecuta hasta que el mapa está cargado correctamente.
 
 ```javascript
 const myMap = new SITNA.Map("mapa", {
@@ -274,4 +276,4 @@ myMap.loaded(function() {
     myMap.addMarker([236074, 6241789]);
 });
 ```
-Se ha añadido [un conjunto de marcadores](getting-started/09.html).
+Así se ha añadido [un conjunto de marcadores](getting-started/09.html) representando puntos de interés.
