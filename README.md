@@ -5,7 +5,7 @@ API JavaScript para la visualización de datos georreferenciados en aplicaciones
 [https://sitna.navarra.es/api/doc/](https://sitna.navarra.es/api/doc/)
 
 ## Sobre la API SITNA
-La API SITNA es una API JavaScript que permite incluir en páginas y aplicaciones web un visor de mapas interactivo y así representar información georreferenciada.
+La API SITNA [es una API JavaScript](how-does-it-work) que permite incluir en páginas y aplicaciones web un visor de mapas interactivo y así representar información georreferenciada.
 
 Es un producto SITNA desarrollado para su uso en aplicaciones web de Gobierno de Navarra, pero puede ser utilizado por cualquier usuario y organización en sus páginas web.
 
