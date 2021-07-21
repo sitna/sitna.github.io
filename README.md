@@ -65,3 +65,23 @@ const myMap = new SITNA.Map("mapa", {
 });
 ```
 El visor tiene ahora [este aspecto](getting-started/03.html).
+
+### 4. Cambiando el sistema de referencia de coordenadas
+Podemos comprobar que el mapa de fondo que hemos elegido no es el más adecuado para mostrar un visor de la Unión Europea porque solamente cubre el territorio español, así que hay que elegir otra capa más adecuada para ello. Ya que estamos, vamos a añadir alguna más para dar al usuario la opción de tener distintos mapas de fondo. Vamos a incluir una capa de vista satélite de Mapbox y unas capas de Carto.
+
+Pero antes de hacer el cambio, hay que tener en cuenta que esas capas solamente son compatibles con el sistema de referencia de coordenadas EPSG:3587, típico de capas que tienen cobertura mundial. Por tanto, hay que utilizar la opción `crs` para establecerlo. No hay que olvidar establecer las coordenadas de `initialExtent` en el nuevo sistema de referencia de coordenadas.
+
+```javascript
+const myMap = new SITNA.Map("mapa", {
+    baseLayers: [
+        SITNA.Consts.layer.MAPBOX_SATELLITE,
+        SITNA.Consts.layer.MAPBOX_STREETS,
+        SITNA.Consts.layer.CARTO_LIGHT,
+        SITNA.Consts.layer.CARTO_DARK
+    ],
+    crs: "EPSG:3857",
+    initialExtent: [-8916022, 3179736, 9869141, 11789603]
+});
+```
+Obtenemos [este resultado](getting-started/04.html). Comprueba que si abrimos la pestaña de herramientas, podemos cambiar el mapa de fondo que estamos viendo.
+
