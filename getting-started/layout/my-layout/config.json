@@ -23,13 +23,13 @@
     {
       "id": "rios",
       "type": "vector",
-      "url": "rivers.kml",
+      "url": "data/rivers.kml",
       "title": "Ríos"
     },
     {
       "id": "capitales",
       "type": "vector",
-      "url": "capitals.geojson",
+      "url": "data/capitals.geojson",
       "title": "Capitales del mundo"
     }
   ],
