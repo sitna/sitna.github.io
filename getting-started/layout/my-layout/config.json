@@ -1,0 +1,50 @@
+{
+  "crs": "EPSG:3857",
+  "initialExtent": [
+    -8916022,
+    3179736,
+    9869141,
+    11789603
+  ],
+  "baseLayers": [
+    "mapbox_satellite",
+    "mapbox_streets",
+    "carto_light",
+    "carto_dark"
+  ],
+  "workLayers": [
+    {
+      "id": "paises",
+      "type": "WMS",
+      "url": "https://bio.discomap.eea.europa.eu/arcgis/services/Internal/Basemap_EEA38_WM/MapServer/WMSServer",
+      "layerNames": [ "4" ],
+      "title": "Países del mundo"
+    },
+    {
+      "id": "rios",
+      "type": "vector",
+      "url": "rivers.kml",
+      "title": "Ríos"
+    },
+    {
+      "id": "capitales",
+      "type": "vector",
+      "url": "capitals.geojson",
+      "title": "Capitales del mundo"
+    }
+  ],
+  "controls": {
+    "TOC": false,
+    "workLayerManager": {
+      "div": "layers"
+    },
+    "basemapSelector": {
+      "div": "basemaps"
+    },
+    "search": false,
+    "measure": false,
+    "coordinates": {
+      "showGeo": true
+    }
+  }
+}
