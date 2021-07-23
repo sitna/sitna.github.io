@@ -496,7 +496,7 @@ Aunque en base a parámetros del constructor de `SITNA.Map` es posible un gran g
 
 Vamos a quitar de los parámetros del constructor la configuración del visor que hemos creado y la vamos a añadir a una maquetación:
 
-[[Editar código]](https://jsfiddle.net/r5tmf0xw/)
+[[Editar código]](https://jsfiddle.net/9xc3shob/)
 ```javascript
 const myMap = new SITNA.Map("mapa", {
     // Instanciamos el mapa con una maquetación personalizada
