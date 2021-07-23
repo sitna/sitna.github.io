@@ -500,7 +500,7 @@ Vamos a quitar de los parámetros del constructor la configuración del visor qu
 ```javascript
 const myMap = new SITNA.Map("mapa", {
     // Instanciamos el mapa con una maquetación personalizada
-    layout: "layout/my-layout"
+    layout: "//sitna.github.io/getting-started/layout/my-layout"
 });
 
 myMap.loaded(() => {
