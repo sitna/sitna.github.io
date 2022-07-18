@@ -98,7 +98,7 @@ Obtenemos [este resultado](getting-started/04.html). Comprueba que si abrimos la
 ### 5. Añadiendo capas de trabajo
 El visor hasta ahora es poco interesante, porque no tenemos más que un fondo. Vamos a añadir alguna capa sobre la que trabajar. Por ejemplo, vamos a añadir una capa que muestra los países de la Unión Europea desde un servicio WMS de la Agencia Europea de Medio Ambiente:
 
-[[Editar código]](https://jsfiddle.net/34aw5q9e/)
+[[Editar código]](https://jsfiddle.net/jbqntxcr/)
 ```javascript
 const myMap = new SITNA.Map("mapa", {
     baseLayers: [
