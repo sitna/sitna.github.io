@@ -98,7 +98,7 @@ Obtenemos [este resultado](getting-started/04.html). Comprueba que si abrimos la
 ### 5. Añadiendo capas de trabajo
 El visor hasta ahora es poco interesante, porque no tenemos más que un fondo. Vamos a añadir alguna capa sobre la que trabajar. Por ejemplo, vamos a añadir una capa que muestra los países de la Unión Europea desde un servicio WMS de la Agencia Europea de Medio Ambiente:
 
-[[Editar código]](https://jsfiddle.net/39tugrxp/)
+[[Editar código]](https://jsfiddle.net/34aw5q9e/)
 ```javascript
 const myMap = new SITNA.Map("mapa", {
     baseLayers: [
@@ -115,7 +115,7 @@ const myMap = new SITNA.Map("mapa", {
             id: "paises",
             type: SITNA.Consts.layerType.WMS,
             url: "https://bio.discomap.eea.europa.eu/arcgis/services/Internal/Basemap_EEA38_WM/MapServer/WMSServer",
-            layerNames: ["2", "3"]
+            layerNames: ["1", "3"]
         }
     ]
 });
@@ -126,7 +126,7 @@ Los valores de la opción `layerNames` se han obtenido del [documento de capacid
 ### 6. Ajustando las capas de trabajo
 Tal como está el visor ahora, tenemos información de los países, pero ya no se ve la ortofotografía. Además, si miramos en las herramientas vemos que la capa cargada tiene un nombre poco amigable. Vamos a dejar solo las fronteras y vamos a poner un título a la capa:
 
-[[Editar código]](https://jsfiddle.net/9o83dh2m/)
+[[Editar código]](https://jsfiddle.net/h9q7fnrd/)
 ```javascript
 const myMap = new SITNA.Map("mapa", {
     baseLayers: [
@@ -143,7 +143,7 @@ const myMap = new SITNA.Map("mapa", {
             type: SITNA.Consts.layerType.WMS,
             url: "https://bio.discomap.eea.europa.eu/arcgis/services/Internal/Basemap_EEA38_WM/MapServer/WMSServer",
             // Dejamos solamente la capa de fronteras del servicio
-            layerNames: ["4"],
+            layerNames: ["3"],
             // Le ponemos un título a la capa
             title: "Países del mundo"
         }
@@ -155,7 +155,7 @@ El resultado [es este](getting-started/06.html).
 ### 7. Añadiendo entidades vectoriales en archivos geográficos
 Además de datos raster, es posible añadir datos vectoriales desde un servicio WFS o desde archivos geográficos en formato KML, GeoJSON, etc. Vamos a añadir un par de archivos:
 
-[[Editar código]](https://jsfiddle.net/5qsd7kmz/)
+[[Editar código]](https://jsfiddle.net/2p4Lvnbr/)
 ```javascript
 const myMap = new SITNA.Map("mapa", {
     baseLayers: [
@@ -171,7 +171,7 @@ const myMap = new SITNA.Map("mapa", {
             id: "paises",
             type: SITNA.Consts.layerType.WMS,
             url: "https://bio.discomap.eea.europa.eu/arcgis/services/Internal/Basemap_EEA38_WM/MapServer/WMSServer",
-            layerNames: ["4"],
+            layerNames: ["3"],
             title: "Países del mundo"
         },
         // Añadimos una capa con un archivo KML de ríos
@@ -197,7 +197,7 @@ Y ya tenemos [dos capas de trabajo más](getting-started/07.html). La API SITNA 
 ### 8. Cambiando los controles de usuario
 Por defecto, la API SITNA carga con el visor una serie de controles de usuario, como la galería de mapas de fondo o un árbol de capas de trabajo. Los controles que se cargan se pueden cambiar mediante la propiedad `controls` de las opciones de configuración. Por ejemplo, vamos a quitar el árbol de capas de trabajo y en su lugar vamos a poner una tabla de contenidos como la que tiene el visor de IDENA:
 
-[[Editar código]](https://jsfiddle.net/2brn0kL9/)
+[[Editar código]](https://jsfiddle.net/4q5snat3/)
 ```javascript
 const myMap = new SITNA.Map("mapa", {
     baseLayers: [
@@ -213,7 +213,7 @@ const myMap = new SITNA.Map("mapa", {
             id: "paises",
             type: SITNA.Consts.layerType.WMS,
             url: "https://bio.discomap.eea.europa.eu/arcgis/services/Internal/Basemap_EEA38_WM/MapServer/WMSServer",
-            layerNames: ["4"],
+            layerNames: ["3"],
             title: "Países del mundo"
         },
         {
@@ -246,7 +246,7 @@ Una vez configurado el visor, vamos a añadir lógica. Supongamos que queremos a
 
 Por otro lado, cuando se introduce lógica que afecta a elementos del mapa, es necesario meterla dentro de una función de callback que pasará como parámetro al método `loaded` del objeto de mapa. De esta forma nos aseguramos de que no se ejecuta hasta que el mapa está cargado correctamente.
 
-[[Editar código]](https://jsfiddle.net/wtrhc1xk/)
+[[Editar código]](https://jsfiddle.net/nb9gzfk4/)
 ```javascript
 const myMap = new SITNA.Map("mapa", {
     baseLayers: [
@@ -262,7 +262,7 @@ const myMap = new SITNA.Map("mapa", {
             id: "paises",
             type: SITNA.Consts.layerType.WMS,
             url: "https://bio.discomap.eea.europa.eu/arcgis/services/Internal/Basemap_EEA38_WM/MapServer/WMSServer",
-            layerNames: ["4"],
+            layerNames: ["3"],
             title: "Países del mundo"
         },
         {
@@ -306,7 +306,7 @@ Si no se especifica nada más que las coordenadas en la llamada la método `addM
 
 Pero generalmente nos interesa añadir los marcadores a una capa concreta, así que vamos a hacer eso: añadiremos una capa al mapa y cuando esté lista añadiremos los marcadores a ella.
 
-[[Editar código]](https://jsfiddle.net/k2zm1cq8/)
+[[Editar código]](https://jsfiddle.net/wyfzd5ka/)
 ```javascript
 const myMap = new SITNA.Map("mapa", {
     baseLayers: [
@@ -322,7 +322,7 @@ const myMap = new SITNA.Map("mapa", {
             id: "paises",
             type: SITNA.Consts.layerType.WMS,
             url: "https://bio.discomap.eea.europa.eu/arcgis/services/Internal/Basemap_EEA38_WM/MapServer/WMSServer",
-            layerNames: ["4"],
+            layerNames: ["3"],
             title: "Países del mundo"
         },
         {
@@ -370,7 +370,7 @@ Ahora [los marcadores están en la capa "Puntos de interés"](getting-started/10
 ### 11. Enriqueciendo los marcadores.
 Por ahora los marcadores no dicen mucho. Vamos a añadirles información. Por un lado, vamos a meterlos en grupos. Si metemos un marcador en un grupo, tendrá un icono diferenciado que se mostrará en la leyenda. Eso se hace con la propiedad `group`. Por otro lado, vamos a meter atributos al marcador. Esto se hace asignando un diccionario de pares clave-valor a la propiedad `data`.
 
-[[Editar código]](https://jsfiddle.net/kx91nwjr/)
+[[Editar código]](https://jsfiddle.net/9yv4zLob/)
 ```javascript
 const myMap = new SITNA.Map("mapa", {
     baseLayers: [
@@ -386,7 +386,7 @@ const myMap = new SITNA.Map("mapa", {
             id: "paises",
             type: SITNA.Consts.layerType.WMS,
             url: "https://bio.discomap.eea.europa.eu/arcgis/services/Internal/Basemap_EEA38_WM/MapServer/WMSServer",
-            layerNames: ["4"],
+            layerNames: ["3"],
             title: "Países del mundo"
         },
         {
