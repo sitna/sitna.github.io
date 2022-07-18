@@ -5,6 +5,10 @@
     font-style: normal;
 }
 
+#mapa {
+    height: 100%;
+}
+
 #basemaps, #layers {
     position: absolute;
     top: auto;
