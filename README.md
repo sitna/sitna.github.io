@@ -73,9 +73,25 @@ const myMap = new SITNA.Map("mapa", {
 El visor tiene ahora [este aspecto](getting-started/03.html).
 
 ### 4. Cambiando el sistema de referencia de coordenadas
-Podemos comprobar que el mapa de fondo que hemos elegido no es el más adecuado para mostrar un visor de la Unión Europea porque solamente cubre el territorio español, así que hay que elegir otra capa más adecuada para ello. Ya que estamos, vamos a añadir alguna más para dar al usuario la opción de tener distintos mapas de fondo. Vamos a incluir una capa de vista satélite de Mapbox y unos mapas base de Mapbox y Carto.
+Podemos comprobar que el mapa de fondo que hemos elegido no es el más adecuado para mostrar un visor de la Unión Europea porque solamente cubre el territorio español, así que hay que elegir otra capa más adecuada para ello.
 
-Pero antes de hacer el cambio, hay que tener en cuenta que esas capas solamente son compatibles con el sistema de referencia de coordenadas EPSG:3857, típico de capas que tienen cobertura mundial. Por tanto, hay que utilizar la opción `crs` para establecerlo. No hay que olvidar establecer las coordenadas de `initialExtent` en el nuevo sistema de referencia de coordenadas.
+Pero antes de hacer el cambio, hay que tener en cuenta que esta capa solamente es compatible con el sistema de referencia de coordenadas EPSG:3857, típico de capas que tienen cobertura mundial. Por tanto, hay que utilizar la opción `crs` para establecerlo. No hay que olvidar establecer las coordenadas de `initialExtent` en el nuevo sistema de referencia de coordenadas.
+
+[[Editar código]](https://jsfiddle.net/jxdytnwp/)
+```javascript
+const myMap = new SITNA.Map("mapa", {
+    // Establecemos cuatro capas para el fondo, por defecto la imagen satélite ofrecida por Mapbox
+    baseLayers: [SITNA.Consts.layer.MAPBOX_SATELLITE],
+    // Establecemos el sistema de referencia de coordenadas (CRS)
+    crs: "EPSG:3857",
+    // Las coordenadas deben estar en EPSG:3857
+    initialExtent: [-8916022, 3179736, 9869141, 11789603]
+});
+```
+Obtenemos [este resultado](getting-started/04.html).
+
+### 5. Añadiendo capas de fondo
+Tenemos una capa de imagen satélite como fondo, pero el visor tiene incorporado un control para seleccionar la capa de fondo, así que le podemos poner más de una. Vamos a incluir una capa de vista satélite de Mapbox y unos mapas base de Mapbox y Carto.
 
 [[Editar código]](https://jsfiddle.net/kn6w54L0/)
 ```javascript
@@ -93,9 +109,9 @@ const myMap = new SITNA.Map("mapa", {
     initialExtent: [-8916022, 3179736, 9869141, 11789603]
 });
 ```
-Obtenemos [este resultado](getting-started/04.html). Comprueba que si abrimos la pestaña de herramientas, podemos cambiar el mapa de fondo que estamos viendo.
+Ahora [puedes comprobar](getting-started/05.html) que si abrimos la pestaña de herramientas, podemos cambiar el mapa de fondo que estamos viendo.
 
-### 5. Añadiendo capas de trabajo
+### 6. Añadiendo capas de trabajo
 El visor hasta ahora es poco interesante, porque no tenemos más que un fondo. Vamos a añadir alguna capa sobre la que trabajar. Por ejemplo, vamos a añadir una capa que muestra los países de la Unión Europea desde un servicio WMS de la Agencia Europea de Medio Ambiente:
 
 [[Editar código]](https://jsfiddle.net/jbqntxcr/)
@@ -120,10 +136,10 @@ const myMap = new SITNA.Map("mapa", {
     ]
 });
 ```
-Y ya tenemos [los países en el mapa](getting-started/05.html). Si pulsas sobre un país, enviarás una consulta `GetFeatureInfo` al servicio WMS y obtendrás información relevante.
+Y ya tenemos [los países en el mapa](getting-started/06.html). Si pulsas sobre un país, enviarás una consulta `GetFeatureInfo` al servicio WMS y obtendrás información relevante.
 Los valores de la opción `layerNames` se han obtenido del [documento de capacidades del servicio WMS](https://bio.discomap.eea.europa.eu/arcgis/services/Internal/Basemap_EEA38_WM/MapServer/WMSServer?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities).
 
-### 6. Ajustando las capas de trabajo
+### 7. Ajustando las capas de trabajo
 Tal como está el visor ahora, tenemos información de los países, pero ya no se ve la ortofotografía. Además, si miramos en las herramientas vemos que la capa cargada tiene un nombre poco amigable. Vamos a dejar solo las fronteras y vamos a poner un título a la capa:
 
 [[Editar código]](https://jsfiddle.net/h9q7fnrd/)
@@ -150,9 +166,9 @@ const myMap = new SITNA.Map("mapa", {
     ]
 });
 ```
-El resultado [es este](getting-started/06.html).
+El resultado [es este](getting-started/07.html).
 
-### 7. Añadiendo entidades vectoriales en archivos geográficos
+### 8. Añadiendo entidades vectoriales en archivos geográficos
 Además de datos raster, es posible añadir datos vectoriales desde un servicio WFS o desde archivos geográficos en formato KML, GeoJSON, etc. Vamos a añadir un par de archivos:
 
 [[Editar código]](https://jsfiddle.net/2p4Lvnbr/)
@@ -192,9 +208,9 @@ const myMap = new SITNA.Map("mapa", {
     ]
 });
 ```
-Y ya tenemos [dos capas de trabajo más](getting-started/07.html). La API SITNA intenta inferir el formato de archivo geográfico por su extensión en el nombre, por eso la fuente de datos de la capa de ríos es reconocida como un archivo KML. No obstante, el formato se puede especificar mediante la propiedad `format`, como en la capa de capitales.
+Y ya tenemos [dos capas de trabajo más](getting-started/08.html). La API SITNA intenta inferir el formato de archivo geográfico por su extensión en el nombre, por eso la fuente de datos de la capa de ríos es reconocida como un archivo KML. No obstante, el formato se puede especificar mediante la propiedad `format`, como en la capa de capitales.
 
-### 8. Cambiando los controles de usuario
+### 9. Cambiando los controles de usuario
 Por defecto, la API SITNA carga con el visor una serie de controles de usuario, como la galería de mapas de fondo o un árbol de capas de trabajo. Los controles que se cargan se pueden cambiar mediante la propiedad `controls` de las opciones de configuración. Por ejemplo, vamos a quitar el árbol de capas de trabajo y en su lugar vamos a poner una tabla de contenidos como la que tiene el visor de IDENA:
 
 [[Editar código]](https://jsfiddle.net/4q5snat3/)
@@ -239,9 +255,9 @@ const myMap = new SITNA.Map("mapa", {
     }
 });
 ```
-Si abrimos ahora [el visor](getting-started/08.html), veremos que en "capas cargadas" tendremos una lista ordenada y ordenable de las capas de trabajo.
+Si abrimos ahora [el visor](getting-started/09.html), veremos que en "capas cargadas" tendremos una lista ordenada y ordenable de las capas de trabajo.
 
-### 9. Añadiendo marcadores
+### 10. Añadiendo marcadores
 Una vez configurado el visor, vamos a añadir lógica. Supongamos que queremos añadir al mapa una colección de puntos de interés. Podemos hacerlo añadiendo marcadores geográficos. Para ello, usamos el método `addMarker`, pasándole como parámetro las coordenadas del punto (en el sistema de referencia de coordenadas del mapa, en este caso, EPSG:3857). 
 
 Por otro lado, cuando se introduce lógica que afecta a elementos del mapa, es necesario meterla dentro de una función de callback que pasará como parámetro al método `loaded` del objeto de mapa. De esta forma nos aseguramos de que no se ejecuta hasta que el mapa está cargado correctamente.
@@ -299,9 +315,9 @@ myMap.loaded(() => {
     myMap.addMarker([236074, 6241789]);
 });
 ```
-Así se ha añadido [un conjunto de marcadores](getting-started/09.html) representando puntos de interés.
+Así se ha añadido [un conjunto de marcadores](getting-started/10.html) representando puntos de interés.
 
-### 10. Creando la capa para los marcadores
+### 11. Creando la capa para los marcadores
 Si no se especifica nada más que las coordenadas en la llamada la método `addMarker`, la API SITNA crea una capa de tipo `SITNA.Consts.layerType.VECTOR` para añadir a ella los marcadores. Por eso, si revisamos cómo está el visor actualmente, veremos que en "capas cargadas" hay una nueva capa con título "Vectores" que contiene los marcadores que hemos añadido. 
 
 Pero generalmente nos interesa añadir los marcadores a una capa concreta, así que vamos a hacer eso: añadiremos una capa al mapa y cuando esté lista añadiremos los marcadores a ella.
@@ -365,9 +381,9 @@ myMap.loaded(() => {
     });
 });
 ```
-Ahora [los marcadores están en la capa "Puntos de interés"](getting-started/10.html).
+Ahora [los marcadores están en la capa "Puntos de interés"](getting-started/11.html).
 
-### 11. Enriqueciendo los marcadores.
+### 12. Enriqueciendo los marcadores.
 Por ahora los marcadores no dicen mucho. Vamos a añadirles información. Por un lado, vamos a meterlos en grupos. Si metemos un marcador en un grupo, tendrá un icono diferenciado que se mostrará en la leyenda. Eso se hace con la propiedad `group`. Por otro lado, vamos a meter atributos al marcador. Esto se hace asignando un diccionario de pares clave-valor a la propiedad `data`.
 
 [[Editar código]](https://jsfiddle.net/9yv4zLob/)
@@ -485,9 +501,9 @@ myMap.loaded(() => {
     });
 });
 ```
-Con estos cambios, los marcadores [están clasificados y tienen información asociada](getting-started/11.html).
+Con estos cambios, los marcadores [están clasificados y tienen información asociada](getting-started/12.html).
 
-### 12. Estableciendo una maquetación
+### 13. Estableciendo una maquetación
 Aunque en base a parámetros del constructor de `SITNA.Map` es posible un gran grado de personalización, puede no ser suficiente. Por ejemplo, puede interesar que el visor tenga una imagen corporativa, o que incluya controles de usuario en lugares distintos a los ofrecidos por defecto. Para esos casos existe el mecanismo de maquetación. Una maquetación, o `layout` es una carpeta donde habrá uno o más de los siguientes archivos:
 - Un [documento JSON](getting-started/layout/my-layout/config.json) con la configuración a pasar al objeto de mapa.
 - Un [documento de texto con HTML](getting-started/layout/my-layout/markup.html) representando el marcado que deseamos que se incruste en el contenedor del mapa. Este marcado será el andamiaje donde se colocarán los controles de usuario.
@@ -575,4 +591,4 @@ myMap.loaded(() => {
     });
 });
 ```
-Ahora tenemos un [visor con una maquetación personalizada](getting-started/12.html). Hemos eliminado controles superfluos y hemos colocado los que nos interesan en otro contenedor.
+Ahora tenemos un [visor con una maquetación personalizada](getting-started/13.html). Hemos eliminado controles superfluos y hemos colocado los que nos interesan en otro contenedor.
