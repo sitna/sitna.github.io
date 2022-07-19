@@ -77,10 +77,10 @@ Podemos comprobar que el mapa de fondo que hemos elegido no es el más adecuado 
 
 Pero antes de hacer el cambio, hay que tener en cuenta que esta capa solamente es compatible con el sistema de referencia de coordenadas EPSG:3857, típico de capas que tienen cobertura mundial. Por tanto, hay que utilizar la opción `crs` para establecerlo. No hay que olvidar establecer las coordenadas de `initialExtent` en el nuevo sistema de referencia de coordenadas.
 
-[[Editar código]](https://jsfiddle.net/jxdytnwp/)
+[[Editar código]](https://jsfiddle.net/5u7nj6xk/)
 ```javascript
 const myMap = new SITNA.Map("mapa", {
-    // Establecemos cuatro capas para el fondo, por defecto la imagen satélite ofrecida por Mapbox
+    // Establecemos como capa de fondo la imagen satélite ofrecida por Mapbox
     baseLayers: [SITNA.Consts.layer.MAPBOX_SATELLITE],
     // Establecemos el sistema de referencia de coordenadas (CRS)
     crs: "EPSG:3857",
