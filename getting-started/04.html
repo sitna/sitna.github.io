@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Cambiando el CRS</title>
+</head>
+<body>
+    <script src="//sitna.navarra.es/api/"></script>
+    <div id="mapa"></div>
+    <script>
+        const myMap = new SITNA.Map("mapa", {
+            // Establecemos como capa de fondo la imagen satélite ofrecida por Mapbox
+            baseLayers: [SITNA.Consts.layer.MAPBOX_SATELLITE],
+            // Establecemos el sistema de referencia de coordenadas (CRS)
+            crs: "EPSG:3857",
+            // Las coordenadas deben estar en EPSG:3857
+            initialExtent: [-8916022, 3179736, 9869141, 11789603]
+        });
+    </script>
+</body>
+</html>
