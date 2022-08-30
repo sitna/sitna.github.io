@@ -1,6 +1,3 @@
-# API SITNA
-API JavaScript para la visualización de datos georreferenciados en aplicaciones web.
-
 ## Documentación
 [https://sitna.navarra.es/api/doc/](https://sitna.navarra.es/api/doc/)
 
