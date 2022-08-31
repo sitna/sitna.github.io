@@ -16,6 +16,16 @@ Entre otras capacidades, la API SITNA:
 - Permite crear marcadores puntuales con información asociada.
 - También es posible cargar información geográfica desde un fichero en formato KML, GeoJSON u otros.
 
+## Componentes de un mapa
+
+Un mapa típico desde el punto de vista de información geográfica está compuesto de capas, que son imágenes que cubren el área de visualización del mapa y que se superponen unas sobre otras al estilo de las hojas de un cuaderno. Cada capa representa un tipo de información geográfica. De este modo, lo habitual es que haya una capa de fondo y una o varias capas de trabajo. Las capas de fondo sirven para tener una referencia geográfica que haga de marco de la información que queremos representar, las capas de trabajo contienen la información geográfica que queremos transmitir con nuestro mapa.
+
+Por ejemplo, supongamos que queremos crear un mapa de nuestro pueblo en el que se muestren las zonas con más riesgo de ser anegadas en una hipotética inundación. Como capa de fondo podemos poner una cartografía que muestre la zona del pueblo. Por encima podemos colocar la capa de zonas de riesgo de inundabilidad ([disponible públicamente a través de la Infraestructura de Datos Espaciales de Navarra](https://idena.navarra.es/catalogo/gn/srv/spa/search#|spaSITNAHIDROG_Pol_RiesgosPOT.xml)). También sería útil superponer la capa de [parcelas rústicas](https://idena.navarra.es/catalogo/gn/srv/spa/search#|spaSITNACATAST_Pol_ParcelaRusti.xml) para poder contactar con los posibles afectados.
+
+![Superposición de capas en un mapa](/img/layers.png)
+
+Desde el punto de vista de la representación de los datos, las capas pueden ser de dos tipos: pueden ser una matriz de pixels (una capa raster) o representar los elementos como entidades geométricas (una capa vectorial).
+
 ## Empezando a usar la API SITNA
 
 Para incrustar un visor en una aplicación web, hacen falta tres elementos:
