@@ -71,12 +71,12 @@ Aquí tenemos [el resultado](getting-started/02.html). `SITNA.Consts.layer.IGN_E
 ### 3. Cambiando la extensión inicial del mapa
 Supongamos que queremos crear un visor centrado en la Unión Europea. Lo podemos hacer pasándole los valores adecuados a la opción `initialExtent`. Estos son cuatro coordenadas indicando los límites hacia el oeste, sur, este y norte de la extensión inicial del mapa. Dado que por defecto los mapas de la API SITNA utilizan el sistema de referencia de coordenadas EPSG:25830 (uno de los oficiales en la Península Ibérica), hay que introducir las coordenadas en ese sistema de referencia.
 
-[[Editar código]](https://jsfiddle.net/ztvjrqgk/)
+[[Editar código]](https://jsfiddle.net/v3yxdhbj/)
 ```javascript
 const myMap = new SITNA.Map("mapa", {
     baseLayers: [SITNA.Consts.layer.IGN_ES_ORTHOPHOTO],
     // Establecemos la extensión inicial [xmin, ymin, xmax, ymax]
-    initialExtent: [-1300000, 2900000, 3500000, 8300000]
+    initialExtent: [-130000, 3850000, 1100000, 4850000]
 });
 ```
 El visor tiene ahora [este aspecto](getting-started/03.html).
