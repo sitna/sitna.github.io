@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Estableciendo una maquetación</title>
+</head>
+<body>
+    <script src="//sitna.navarra.es/api/"></script>
+    <div id="mapa"></div>
+	<div id="control3d"></div>
+	<div id="vista3d"></div>
+    <script>
+        const myMap = new SITNA.Map("mapa", {
+            // Instanciamos el mapa con una maquetación personalizada
+            layout: "//sitna.github.io/getting-started/layout/my-layout",
+			controls: {
+				threeD: {
+					div: "control3d"
+				}
+			},
+			views: {
+				threeD: {
+					div: "vista3d"
+				}
+			}
+        });
+
+        myMap.loaded(() => {
+            myMap.addLayer({
+                id: "poi",
+                type: SITNA.Consts.layerType.VECTOR,
+                title: "Puntos de interés"
+            }, () => {
+                myMap.addMarker([-203288, 6652999], {
+                    layer: "poi",
+                    group: "Prehistoria",
+                    data: {
+                        "Nombre": "Stonehenge",
+                        "Fecha de inicio de construcción": "2400-2200 a.e.c.",
+                        "Uso": "Desconocido"
+                    }
+                });
+                myMap.addMarker([1390641, 5144550], {
+                    layer: "poi",
+                    group: "Edad Antigua",
+                    data: {
+                        "Nombre": "Coliseo",
+                        "Fecha de inicio de construcción": "72 e.c.",
+                        "Uso": "Anfiteatro"
+                    }
+                });
+                myMap.addMarker([677254, 6581543], {
+                    layer: "poi",
+                    group: "Edad Media",
+                    data: {
+                        "Nombre": "Catedral de Aquisgrán",
+                        "Fecha de inicio de construcción": "796",
+                        "Uso": "Templo"
+                    }
+                });
+                myMap.addMarker([-399432, 4463713], {
+                    layer: "poi",
+                    group: "Edad Media",
+                    data: {
+                        "Nombre": "Alhambra",
+                        "Fecha de inicio de construcción": "c. 1238",
+                        "Uso": "Residencia"
+                    }
+                });
+                myMap.addMarker([-720856, 7112550], {
+                    layer: "poi",
+                    group: "Prehistoria",
+                    data: {
+                        "Nombre": "Newgrange",
+                        "Fecha de inicio de construcción": "3300-2900 a.e.c.",
+                        "Uso": "Funerario"
+                    }
+                });
+                myMap.addMarker([2641252, 4575413], {
+                    layer: "poi",
+                    group: "Edad Antigua",
+                    data: {
+                        "Nombre": "Partenón",
+                        "Fecha de inicio de construcción": "447 a.e.c.",
+                        "Uso": "Templo"
+                    }
+                });
+                myMap.addMarker([236074, 6241789], {
+                    layer: "poi",
+                    group: "Edad Moderna",
+                    data: {
+                        "Nombre": "Palacio de Versalles",
+                        "Fecha de inicio de construcción": "1661",
+                        "Uso": "Residencia"
+                    }
+                })
+            });
+        });
+    </script>
+</body>
+</html>
