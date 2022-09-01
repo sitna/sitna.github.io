@@ -31,7 +31,7 @@ Por cierto, el resultado de esta superposición de capas que hemos confeccionado
 ## Empezando a usar la API SITNA
 
 Para incrustar un visor en una aplicación web, hacen falta tres elementos:
-- Un elemento `script` con la dirección de la API SITNA. Normalmente esta será https://sitna.navarra.es/api/.
+- Un elemento `script` con la dirección de la API SITNA. Normalmente esta será **https://sitna.navarra.es/api/**.
 - Un elemento de bloque, por ejemplo un `div`, que haga de contenedor donde incrustar el visor.
 - Un elemento `script` donde se instancie un objeto de la clase `SITNA.Map`. Como parámetro del constructor le pasaremos el identificador del elemento contenedor.
 
