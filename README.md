@@ -26,7 +26,7 @@ Por ejemplo, supongamos que queremos crear un mapa de nuestro pueblo en el que s
 
 Desde el punto de vista de la representación de los datos, las capas pueden ser de dos tipos: pueden ser una matriz de pixels (una capa raster) o representar los elementos como entidades geométricas (una capa vectorial).
 
-El resultado de esta superposición de capas es [este](getting-started/layers-example.html).
+Por cierto, el resultado de esta superposición de capas que hemos confeccionado como ejemplo es [este](getting-started/layers-example.html).
 
 ## Empezando a usar la API SITNA
 
