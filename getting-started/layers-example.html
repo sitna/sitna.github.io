@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Mapa de zonas de riesgo de inundación en mi pueblo</title>
+</head>
+<body>
+    <script src="//sitna.navarra.es/api/"></script>
+    <div id="mapa"></div>
+    <script>
+        const myMap = new SITNA.Map("mapa", {
+            initialExtent: [630848.365, 4731508.07, 637652.365, 4736656.07],
+            baseLayers: [SITNA.Consts.layer.IDENA_CARTO],
+			workLayers: [
+				{
+					id: "zonas_riesgo",
+					url: "//idena.navarra.es/ogc/wms/",
+					layerNames: "IDENA:HIDROG_Pol_RiesgosPOT",
+					title: "Zonas de riesgo de inundación"
+				},
+				{
+					id: "parcelas",
+					type: SITNA.Consts.layerType.VECTOR,
+					url: "//sitna.github.io/getting-started/data/capitals.json",
+					title: "Parcelas rústicas"
+				}
+			]
+        });
+    </script>
+</body>
+</html>
