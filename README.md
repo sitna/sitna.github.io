@@ -70,7 +70,6 @@ const myMap = new SITNA.Map("mapa", {
     baseLayers: [SITNA.Consts.layer.IGN_ES_ORTHOPHOTO]
 });
 ```
-Lo que se ha hecho es meter una constante En la documentación 
 Aquí tenemos [el resultado](getting-started/02.html). `SITNA.Consts.layer.IGN_ES_ORTHOPHOTO` es una constante de la API que representa a la capa de ortofoto de uno de los servicios WMTS del IGN de España.
 
 ### 3. Cambiando la extensión inicial del mapa
