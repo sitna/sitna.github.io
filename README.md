@@ -59,7 +59,9 @@ Como primer paso, creamos un documento HTML que incluya los tres elementos:
 Y así tenemos [nuestro primer visor](getting-started/01.html). Podemos observar que está centrado en Navarra y que el mapa de fondo es de un servicio WMTS de IDENA.
 
 ### 2. Cambiando el mapa de fondo
-Vamos a empezar a modificar los valores por defecto del visor. El constructor de `SITNA.Map` acepta como segundo parámetro un objeto con el que se le pueden pasar opciones de configuración. Supongamos que queremos poner una ortofotografía como mapa de fondo. Para ello introduciremos la opción `baseLayers`:
+Vamos a empezar a modificar los valores por defecto del visor. El [constructor](https://sitna.navarra.es/api/doc/SITNA.Map.html) de `SITNA.Map` acepta como segundo parámetro un objeto con el que se le pueden pasar opciones de configuración para modificar su aspecto y comportamiento. 
+
+Supongamos que queremos poner una ortofotografía como mapa de fondo. Para ello introduciremos la opción `baseLayers`. Hay varias maneras de usar esta opción, pero empezaremos por la mas sencilla: En la [documentación](https://sitna.navarra.es/api/doc/SITNA.Consts.layer.html) tenemos una lista de capas predeterminadas que podemos instanciar mediante una constante del espacio de nombres `SITNA.Consts.layer`. Basta con asignarle a la opción `baseLayers` un array con un elemento cuyo valor es la constante correspondiente a la capa deseada:
 
 [[Editar código]](https://jsfiddle.net/bsreLf6v/)
 ```javascript
@@ -68,6 +70,7 @@ const myMap = new SITNA.Map("mapa", {
     baseLayers: [SITNA.Consts.layer.IGN_ES_ORTHOPHOTO]
 });
 ```
+Lo que se ha hecho es meter una constante En la documentación 
 Aquí tenemos [el resultado](getting-started/02.html). `SITNA.Consts.layer.IGN_ES_ORTHOPHOTO` es una constante de la API que representa a la capa de ortofoto de uno de los servicios WMTS del IGN de España.
 
 ### 3. Cambiando la extensión inicial del mapa
