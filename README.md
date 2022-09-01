@@ -73,7 +73,7 @@ const myMap = new SITNA.Map("mapa", {
 Aquí tenemos [el resultado](getting-started/02.html). `SITNA.Consts.layer.IGN_ES_ORTHOPHOTO` es una constante de la API que representa a la capa de ortofoto de uno de los servicios WMTS del IGN de España.
 
 ### 3. Cambiando la extensión inicial del mapa
-Supongamos que queremos crear un visor centrado en la Unión Europea. Lo podemos hacer pasándole los valores adecuados a la opción `initialExtent`. Estos son cuatro coordenadas indicando los límites hacia el oeste, sur, este y norte de la extensión inicial del mapa. Dado que por defecto los mapas de la API SITNA utilizan el sistema de referencia de coordenadas EPSG:25830 (uno de los oficiales en la Península Ibérica), hay que introducir las coordenadas en ese sistema de referencia.
+Supongamos que queremos crear un visor centrado en la Unión Europea. Lo podemos hacer pasándole los valores adecuados a la opción `initialExtent`. Estos son cuatro coordenadas indicando los límites hacia el oeste, sur, este y norte de la extensión inicial del mapa. Dado que por defecto los mapas de la API SITNA utilizan el sistema de referencia de coordenadas EPSG:25830 (uno de los oficiales en la Península Ibérica), hay que introducir las coordenadas en ese sistema de referencia. De momento no te preocupes sobre qué es un sistema de referencia de coordenadas o el valor de los límites de los cuatro puntos cardinales, los explicaremos en el siguiente punto.
 
 [[Editar código]](https://jsfiddle.net/v3yxdhbj/)
 ```javascript
@@ -84,6 +84,9 @@ const myMap = new SITNA.Map("mapa", {
 });
 ```
 El visor tiene ahora [este aspecto](getting-started/03.html).
+
+### ¿Qué es un sistema de referencia de coordenadas?
+[ TO DO ]
 
 ### 4. Cambiando el sistema de referencia de coordenadas
 Podemos comprobar que el mapa de fondo que hemos elegido no es el más adecuado para mostrar un visor de la Unión Europea porque solamente cubre el territorio español, así que hay que elegir otra capa más adecuada para ello.
