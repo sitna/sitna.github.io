@@ -531,7 +531,7 @@ Con estos cambios, los marcadores [están clasificados y tienen información aso
 ### 13. Añadiendo atributos de imagen.
 Ahora tenemos información asociada a cada marcador, pero es exclusivamente textual, y sería interesante añadir una fotografía ilustrativa. Afortunadamente la API SITNA ofrece [un mecanismo](https://sitna.navarra.es/api/doc/tutorial-4-embedding.html) para insertar atributos de imagen a un marcador.
 
-[[Editar código]](https://jsfiddle.net/men5xvys/)
+[[Editar código]](https://jsfiddle.net/m86kjvwq/)
 ```javascript
 const myMap = new SITNA.Map("mapa", {
     baseLayers: [
