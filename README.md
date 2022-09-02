@@ -664,7 +664,7 @@ Aunque en base a parámetros del constructor de `SITNA.Map` es posible un gran g
 
 Vamos a quitar de los parámetros del constructor la configuración del visor que hemos creado y la vamos a añadir a una maquetación:
 
-[[Editar código]](https://jsfiddle.net/9xc3shob/)
+[[Editar código]](https://jsfiddle.net/fven64wj/)
 ```javascript
 const myMap = new SITNA.Map("mapa", {
     // Instanciamos el mapa con una maquetación personalizada
@@ -683,7 +683,8 @@ myMap.loaded(() => {
             data: {
                 "Nombre": "Stonehenge",
                 "Fecha de inicio de construcción": "2400-2200 a.e.c.",
-                "Uso": "Desconocido"
+                "Uso": "Desconocido",
+                "Fotografía__image_auto_200": "//sitna.github.io/getting-started/img/stonehenge.jpg"
             }
         });
         myMap.addMarker([1390641, 5144550], {
@@ -692,7 +693,8 @@ myMap.loaded(() => {
             data: {
                 "Nombre": "Coliseo",
                 "Fecha de inicio de construcción": "72 e.c.",
-                "Uso": "Anfiteatro"
+                "Uso": "Anfiteatro",
+                "Fotografía__image_auto_200": "//sitna.github.io/getting-started/img/colosseum.jpg"
             }
         });
         myMap.addMarker([677254, 6581543], {
@@ -701,7 +703,8 @@ myMap.loaded(() => {
             data: {
                 "Nombre": "Catedral de Aquisgrán",
                 "Fecha de inicio de construcción": "796",
-                "Uso": "Templo"
+                "Uso": "Templo",
+                "Fotografía__image_auto_200": "//sitna.github.io/getting-started/img/aachen.jpg"
             }
         });
         myMap.addMarker([-399432, 4463713], {
@@ -710,7 +713,8 @@ myMap.loaded(() => {
             data: {
                 "Nombre": "Alhambra",
                 "Fecha de inicio de construcción": "c. 1238",
-                "Uso": "Residencia"
+                "Uso": "Residencia",
+                "Fotografía__image_auto_200": "//sitna.github.io/getting-started/img/alhambra.jpg"
             }
         });
         myMap.addMarker([-720856, 7112550], {
@@ -719,7 +723,8 @@ myMap.loaded(() => {
             data: {
                 "Nombre": "Newgrange",
                 "Fecha de inicio de construcción": "3300-2900 a.e.c.",
-                "Uso": "Funerario"
+                "Uso": "Funerario",
+                "Fotografía__image_auto_200": "//sitna.github.io/getting-started/img/newgrange.jpg"
             }
         });
         myMap.addMarker([2641252, 4575413], {
@@ -728,7 +733,8 @@ myMap.loaded(() => {
             data: {
                 "Nombre": "Partenón",
                 "Fecha de inicio de construcción": "447 a.e.c.",
-                "Uso": "Templo"
+                "Uso": "Templo",
+                "Fotografía__image_auto_200": "//sitna.github.io/getting-started/img/parthenon.jpg"
             }
         });
         myMap.addMarker([236074, 6241789], {
@@ -737,7 +743,8 @@ myMap.loaded(() => {
             data: {
                 "Nombre": "Palacio de Versalles",
                 "Fecha de inicio de construcción": "1661",
-                "Uso": "Residencia"
+                "Uso": "Residencia",
+                "Fotografía__image_auto_200": "//sitna.github.io/getting-started/img/versailles.jpg"
             }
         });
     });
