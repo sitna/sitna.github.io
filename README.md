@@ -236,7 +236,7 @@ const myMap = new SITNA.Map("mapa", {
 Y ya tenemos [dos capas de trabajo más](getting-started/08.html). La API SITNA intenta inferir el formato de archivo geográfico por su extensión en el nombre, por eso la fuente de datos de la capa de ríos es reconocida como un archivo KML. No obstante, el formato se puede especificar mediante la propiedad `format`, como en la capa de capitales.
 
 ### 9. Cambiando los controles de usuario
-Por defecto, la API SITNA carga con el visor una serie de controles de usuario, como la galería de mapas de fondo o un árbol de capas de trabajo. Los controles que se cargan se pueden cambiar mediante la propiedad `controls` de las opciones de configuración. Por ejemplo, vamos a quitar el árbol de capas de trabajo y en su lugar vamos a poner una tabla de contenidos como la que tiene el visor de IDENA:
+Por defecto, la API SITNA carga con el visor una serie de controles de usuario, como la galería de mapas de fondo o un árbol de capas de trabajo. En la [documentación](https://sitna.navarra.es/api/doc/global.html#MapControlOptions) hay una lista con ejemplos de los controles que se pueden utilizar. Los controles que se cargan se pueden cambiar mediante la propiedad `controls` de las opciones de configuración. Por ejemplo, vamos a quitar el árbol de capas de trabajo y en su lugar vamos a poner una tabla de contenidos como la que tiene el visor de IDENA:
 
 [[Editar código]](https://jsfiddle.net/4q5snat3/)
 ```javascript
