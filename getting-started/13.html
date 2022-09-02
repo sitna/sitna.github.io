@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Añadiendo atributos de imagen a marcadores</title>
+</head>
+<body>
+    <script src="//sitna.navarra.es/api/dev/"></script>
+    <div id="mapa"></div>
+    <script>
+        const myMap = new SITNA.Map("mapa", {
+            baseLayers: [
+                SITNA.Consts.layer.MAPBOX_SATELLITE,
+                SITNA.Consts.layer.MAPBOX_STREETS,
+                SITNA.Consts.layer.CARTO_LIGHT,
+                SITNA.Consts.layer.CARTO_DARK
+            ],
+            crs: "EPSG:3857",
+            initialExtent: [-8916022, 3179736, 9869141, 11789603],
+            workLayers: [
+                {
+                    id: "paises",
+                    type: SITNA.Consts.layerType.WMS,
+                    url: "https://bio.discomap.eea.europa.eu/arcgis/services/Internal/Basemap_EEA38_WM/MapServer/WMSServer",
+                    layerNames: ["3"],
+                    title: "Países del mundo"
+                },
+                {
+                    id: "rios",
+                    type: SITNA.Consts.layerType.VECTOR,
+                    url: "//sitna.github.io/getting-started/data/rivers.kml",
+                    title: "Ríos"
+                },
+                {
+                    id: "capitales",
+                    type: SITNA.Consts.layerType.VECTOR,
+                    format: SITNA.Consts.mimeType.GEOJSON,
+                    url: "//sitna.github.io/getting-started/data/capitals.json",
+                    title: "Capitales del mundo"
+                }
+            ],
+            controls: {
+                TOC: false,
+                workLayerManager: {
+                    div: "toc"
+                }
+            }
+        });
+
+        myMap.loaded(() => {
+            myMap.addLayer({
+                id: "poi",
+                type: SITNA.Consts.layerType.VECTOR,
+                title: "Puntos de interés"
+            }, () => {
+                myMap.addMarker([-203288, 6652999], {
+                    layer: "poi",
+                    // Establecemos un grupo para este marcador
+                    group: "Prehistoria",
+                    // Añadimos atributos a este marcador
+                    data: {
+                        "Nombre": "Stonehenge",
+                        "Fecha de inicio de construcción": "2400-2200 a.e.c.",
+                        "Uso": "Desconocido",
+                        "Fotografía__image_auto_200": "img/stonehenge.jpg"
+                    }
+                });
+                myMap.addMarker([1390641, 5144550], {
+                    layer: "poi",
+                    group: "Edad Antigua",
+                    data: {
+                        "Nombre": "Coliseo",
+                        "Fecha de inicio de construcción": "72 e.c.",
+                        "Uso": "Anfiteatro",
+                        "Fotografía__image_auto_200": "img/colosseum.jpg"
+                    }
+                });
+                myMap.addMarker([677254, 6581543], {
+                    layer: "poi",
+                    group: "Edad Media",
+                    data: {
+                        "Nombre": "Catedral de Aquisgrán",
+                        "Fecha de inicio de construcción": "796",
+                        "Uso": "Templo",
+                        "Fotografía__image_auto_200": "img/aachen.jpg"
+                    }
+                });
+                myMap.addMarker([-399432, 4463713], {
+                    layer: "poi",
+                    group: "Edad Media",
+                    data: {
+                        "Nombre": "Alhambra",
+                        "Fecha de inicio de construcción": "c. 1238",
+                        "Uso": "Residencia",
+                        "Fotografía__image_auto_200": "img/alhambra.jpg"
+                    }
+                });
+                myMap.addMarker([-720856, 7112550], {
+                    layer: "poi",
+                    group: "Prehistoria",
+                    data: {
+                        "Nombre": "Newgrange",
+                        "Fecha de inicio de construcción": "3300-2900 a.e.c.",
+                        "Uso": "Funerario",
+                        "Fotografía__image_auto_200": "img/newgrange.jpg"
+                    }
+                });
+                myMap.addMarker([2641252, 4575413], {
+                    layer: "poi",
+                    group: "Edad Antigua",
+                    data: {
+                        "Nombre": "Partenón",
+                        "Fecha de inicio de construcción": "447 a.e.c.",
+                        "Uso": "Templo",
+                        "Fotografía__image_auto_200": "img/parthenon.jpg"
+                    }
+                });
+                myMap.addMarker([236074, 6241789], {
+                    layer: "poi",
+                    group: "Edad Moderna",
+                    data: {
+                        "Nombre": "Palacio de Versalles",
+                        "Fecha de inicio de construcción": "1661",
+                        "Uso": "Residencia",
+                        "Fotografía__image_auto_200": "img/versailles.jpg"
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
