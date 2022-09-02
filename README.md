@@ -1,7 +1,8 @@
 # Introducción a la API SITNA
 
-## Documentación
-[https://sitna.navarra.es/api/doc/](https://sitna.navarra.es/api/doc/)
+## Documentación y repositorio
+- [https://sitna.navarra.es/api/doc/](https://sitna.navarra.es/api/doc/)
+- [https://github.com/sitna/api-sitna](https://github.com/sitna/api-sitna)
 
 ## Sobre la API SITNA
 La API SITNA [es una API JavaScript](how-does-it-work) que permite incluir en páginas y aplicaciones web un visor de mapas interactivo y así representar información georreferenciada.
