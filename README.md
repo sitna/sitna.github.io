@@ -528,7 +528,134 @@ myMap.loaded(() => {
 ```
 Con estos cambios, los marcadores [están clasificados y tienen información asociada](getting-started/12.html).
 
-### 13. Estableciendo una maquetación
+### 13. Añadiendo atributos de imagen.
+Ahora tenemos información asociada a cada marcador, pero es exclusivamente textual, y sería interesante añadir una fotografía ilustrativa. Afortunadamente la API SITNA ofrece [un mecanismo](https://sitna.navarra.es/api/doc/tutorial-4-embedding.html) para insertar atributos de imagen a un marcador.
+
+[[Editar código]](https://jsfiddle.net/men5xvys/)
+```javascript
+const myMap = new SITNA.Map("mapa", {
+    baseLayers: [
+        SITNA.Consts.layer.MAPBOX_SATELLITE,
+        SITNA.Consts.layer.MAPBOX_STREETS,
+        SITNA.Consts.layer.CARTO_LIGHT,
+        SITNA.Consts.layer.CARTO_DARK
+    ],
+    crs: "EPSG:3857",
+    initialExtent: [-8916022, 3179736, 9869141, 11789603],
+    workLayers: [
+        {
+            id: "paises",
+            type: SITNA.Consts.layerType.WMS,
+            url: "https://bio.discomap.eea.europa.eu/arcgis/services/Internal/Basemap_EEA38_WM/MapServer/WMSServer",
+            layerNames: ["3"],
+            title: "Países del mundo"
+        },
+        {
+            id: "rios",
+            type: SITNA.Consts.layerType.VECTOR,
+            url: "//sitna.github.io/getting-started/data/rivers.kml",
+            title: "Ríos"
+        },
+        {
+            id: "capitales",
+            type: SITNA.Consts.layerType.VECTOR,
+            format: SITNA.Consts.mimeType.GEOJSON,
+            url: "//sitna.github.io/getting-started/data/capitals.json",
+            title: "Capitales del mundo"
+        }
+    ],
+    controls: {
+        TOC: false,
+        workLayerManager: {
+            div: "toc"
+        }
+    }
+});
+
+myMap.loaded(() => {
+    myMap.addLayer({
+        id: "poi",
+        type: SITNA.Consts.layerType.VECTOR,
+        title: "Puntos de interés"
+    }, () => {
+        myMap.addMarker([-203288, 6652999], {
+            layer: "poi",
+            // Establecemos un grupo para este marcador
+            group: "Prehistoria",
+            // Añadimos atributos a este marcador
+            data: {
+                "Nombre": "Stonehenge",
+                "Fecha de inicio de construcción": "2400-2200 a.e.c.",
+                "Uso": "Desconocido",
+                "Fotografía__image_auto_200": "//sitna.github.io/getting-started/img/stonehenge.jpg"
+            }
+        });
+        myMap.addMarker([1390641, 5144550], {
+            layer: "poi",
+            group: "Edad Antigua",
+            data: {
+                "Nombre": "Coliseo",
+                "Fecha de inicio de construcción": "72 e.c.",
+                "Uso": "Anfiteatro",
+                "Fotografía__image_auto_200": "//sitna.github.io/getting-started/img/colosseum.jpg"
+            }
+        });
+        myMap.addMarker([677254, 6581543], {
+            layer: "poi",
+            group: "Edad Media",
+            data: {
+                "Nombre": "Catedral de Aquisgrán",
+                "Fecha de inicio de construcción": "796",
+                "Uso": "Templo",
+                "Fotografía__image_auto_200": "//sitna.github.io/getting-started/img/aachen.jpg"
+            }
+        });
+        myMap.addMarker([-399432, 4463713], {
+            layer: "poi",
+            group: "Edad Media",
+            data: {
+                "Nombre": "Alhambra",
+                "Fecha de inicio de construcción": "c. 1238",
+                "Uso": "Residencia",
+                "Fotografía__image_auto_200": "//sitna.github.io/getting-started/img/alhambra.jpg"
+            }
+        });
+        myMap.addMarker([-720856, 7112550], {
+            layer: "poi",
+            group: "Prehistoria",
+            data: {
+                "Nombre": "Newgrange",
+                "Fecha de inicio de construcción": "3300-2900 a.e.c.",
+                "Uso": "Funerario",
+                "Fotografía__image_auto_200": "//sitna.github.io/getting-started/img/newgrange.jpg"
+            }
+        });
+        myMap.addMarker([2641252, 4575413], {
+            layer: "poi",
+            group: "Edad Antigua",
+            data: {
+                "Nombre": "Partenón",
+                "Fecha de inicio de construcción": "447 a.e.c.",
+                "Uso": "Templo",
+                "Fotografía__image_auto_200": "//sitna.github.io/getting-started/img/parthenon.jpg"
+            }
+        });
+        myMap.addMarker([236074, 6241789], {
+            layer: "poi",
+            group: "Edad Moderna",
+            data: {
+                "Nombre": "Palacio de Versalles",
+                "Fecha de inicio de construcción": "1661",
+                "Uso": "Residencia",
+                "Fotografía__image_auto_200": "//sitna.github.io/getting-started/img/versailles.jpg"
+            }
+        });
+    });
+});
+```
+Los marcadores [ahora tienen un atributo de imagen](getting-started/13.html).
+
+### 14. Estableciendo una maquetación
 Aunque en base a parámetros del constructor de `SITNA.Map` es posible un gran grado de personalización, puede no ser suficiente. Por ejemplo, puede interesar que el visor tenga una imagen corporativa, o que incluya controles de usuario en lugares distintos a los ofrecidos por defecto. Para esos casos existe el mecanismo de maquetación. Una maquetación, o `layout` es una carpeta donde habrá uno o más de los siguientes archivos:
 - Un [documento JSON](getting-started/layout/my-layout/config.json) con la configuración a pasar al objeto de mapa.
 - Un [documento de texto con HTML](getting-started/layout/my-layout/markup.html) representando el marcado que deseamos que se incruste en el contenedor del mapa. Este marcado será el andamiaje donde se colocarán los controles de usuario.
@@ -616,4 +743,4 @@ myMap.loaded(() => {
     });
 });
 ```
-Ahora tenemos un [visor con una maquetación personalizada](getting-started/13.html). Hemos eliminado controles superfluos y hemos colocado los que nos interesan en otro contenedor.
+Ahora tenemos un [visor con una maquetación personalizada](getting-started/14.html). Hemos eliminado controles superfluos y hemos colocado los que nos interesan en otro contenedor.
