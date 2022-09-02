@@ -86,7 +86,15 @@ const myMap = new SITNA.Map("mapa", {
 El visor tiene ahora [este aspecto](getting-started/03.html).
 
 ### ¿Qué es un sistema de referencia de coordenadas?
-[ TO DO ]
+Para abordar el problema de identificar las distintas posiciones en la superficie de la tierra una aproximación válida sería asignar a cada punto de esta superficie un par de coordenadas. De este modo un mapa no sería más que un gráfico con su eje de abscisas (X) y su eje de ordenadas (Y), en el que la representación de cada punto de la superficie de la tierra estaría colocada en su coordenada correspondiente.
+
+Pero esto no es un problema sencillo porque es imposible proyectar la superficie de la esfera sobre un plano sin que quede distorsionada. El resultado es que cualquier mapa falsea formas, áreas, direcciones y/o distancias. La cuestión se agrava si tenemos en cuenta que el planeta Tierra no es exactamente esférico, introduciendo distorsiones adicionales. Si ajustamos el modelo geodésico del planeta y las transformaciones matemáticas para asignar coordenadas, podemos minimizar la distorsión generada en una región del planeta, pero a costa de agravarla en el resto de las regiones. Es por eso que existen cientos de "recetas" para definir las coordenadas de los puntos del planeta, cada una de ellas o bien está optimizada para una región de la Tierra o bien es una solución de compromiso para su uso a nivel global. Cada una de estas recetas es un sistema de referencia de coordenadas (también llamado CRS por sus siglas en inglés).
+
+De pendiendo de la magnitud que se utiliza como coordenada, los CRS se pueden clasificar en sistemas de referencia geográficos (que utilizan una unidad de ángulo en las coordenadas, generalmente el grado) y sistemas de referencia proyectados (que utilizan una unidad de distancia en sus coordenadas, generalmente el metro).
+
+Con el propósito de identificar los CRS, el European Petroleum Survey Group confeccionó una lista y les asignó un código numérico este código se conoce actualmente como EPSG. El CRS oficial en la zona de Navarra es el **EPSG:25830** por lo que es el CRS por defecto de la API SITNA. Otros CRS de interés son **EPSG:3857**, CRS de carácter global utilizado por los servicios de mapas más conocidos, como Google Maps u OpenStreetMaps, y **EPSG:4326**, sistema de referencia geográfico global.
+
+El ejemplo anterior, los valores de la opción `initialExtent` son coordenadas de una región que cubre aproximadamente la Península Ibérica en el CRS EPSG:25830.
 
 ### 4. Cambiando el sistema de referencia de coordenadas
 Podemos comprobar que el mapa de fondo que hemos elegido no es el más adecuado para mostrar un visor de la Unión Europea porque solamente cubre el territorio español, así que hay que elegir otra capa más adecuada para ello.
