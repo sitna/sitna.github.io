@@ -2,7 +2,11 @@
 
 ## Tabla de contenidos
 - [Documentación y repositorio](#Documentación-y-repositorio)
-- 
+- [Sobre la API SITNA](#Sobre-la-API-SITNA)
+- [Componentes de un mapa](#Componentes-de-un-mapa)
+- [Empezando a usar la API SITNA](#Empezando-a-usar-la-API-SITNA)
+- [1. Visor por defecto](#1.-Visor-por-defecto)
+
 ## Documentación y repositorio
 - [https://sitna.navarra.es/api/doc/](https://sitna.navarra.es/api/doc/)
 - [https://github.com/sitna/api-sitna](https://github.com/sitna/api-sitna)
