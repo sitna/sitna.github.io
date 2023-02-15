@@ -36,7 +36,7 @@
 #toggles button {
     border: none;
     background-color: transparent;
-    color: white;
+    color: #999999;
     text-shadow: black 0.1rem 0.1rem;
     font-size: 3rem;
     bottom: 2rem;
