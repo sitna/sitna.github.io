@@ -33,36 +33,31 @@
     gap: 1rem;
 }
 
-#basemaps-toggle, #layers-toggle {
+#toggles button {
     border: none;
     background-color: transparent;
     color: black;
     font-size: 3rem;
     bottom: 2rem;
     z-index: 10100;
+    width: 3rem;
+    height: 3rem;
 }
 
-    #basemaps-toggle {
-        left: calc(50% - 3.5rem);
-        width: 3rem;
-        height: 3rem;
-    }
+#basemaps-toggle:before {
+    font-family: mapskin;
+    content: "\e071";
+}
 
-    #basemaps-toggle:before {
-        font-family: mapskin;
-        content: "\e071";
-    }
+#layers-toggle:before {
+    font-family: mapskin;
+    content: "\e072";
+}
 
-    #layers-toggle {
-        left: calc(50% + .5rem);
-        width: 3rem;
-        height: 3rem;
-    }
-
-    #layers-toggle:before {
-        font-family: mapskin;
-        content: "\e072";
-    }
+#search-button:before {
+    font-family: mapskin;
+    content: "\e003";
+}
 
 .tc-map .tc-ctl.lo-hidden {
     display: none;
