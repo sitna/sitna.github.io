@@ -92,6 +92,7 @@
                 
                 // Añadimos un botón de búsqueda de ciudades
                 const searchButton = document.createElement("button");
+                searchButton.setAttribute("id", "search-button");
                 searchButton.addEventListener("click", function (e) {
                     const pattern = prompt("Nombre de ciudad");
                     const patternRegExp = new RegExp(pattern, "i");
