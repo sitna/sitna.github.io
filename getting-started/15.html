@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Trabajando con entidades geográficas</title>
+</head>
+<body>
+    <script src="//sitna.navarra.es/api/"></script>
+    <div id="mapa"></div>
+    <script>
+        const myMap = new SITNA.Map("mapa", {
+            // Instanciamos el mapa con una maquetación personalizada
+            layout: "//sitna.github.io/getting-started/layout/my-layout"
+        });
+
+        myMap.loaded(() => {
+            myMap.addLayer({
+                id: "poi",
+                type: SITNA.Consts.layerType.VECTOR,
+                title: "Puntos de interés"
+            }, () => {
+                myMap.addMarker([-203288, 6652999], {
+                    layer: "poi",
+                    group: "Prehistoria",
+                    data: {
+                        "Nombre": "Stonehenge",
+                        "Fecha de inicio de construcción": "2400-2200 a.e.c.",
+                        "Uso": "Desconocido",
+                        "Fotografía__image_auto_200": "//sitna.github.io/getting-started/img/stonehenge.jpg"
+                    }
+                });
+                myMap.addMarker([1390641, 5144550], {
+                    layer: "poi",
+                    group: "Edad Antigua",
+                    data: {
+                        "Nombre": "Coliseo",
+                        "Fecha de inicio de construcción": "72 e.c.",
+                        "Uso": "Anfiteatro",
+                        "Fotografía__image_auto_200": "//sitna.github.io/getting-started/img/colosseum.jpg"
+                    }
+                });
+                myMap.addMarker([677254, 6581543], {
+                    layer: "poi",
+                    group: "Edad Media",
+                    data: {
+                        "Nombre": "Catedral de Aquisgrán",
+                        "Fecha de inicio de construcción": "796",
+                        "Uso": "Templo",
+                        "Fotografía__image_auto_200": "//sitna.github.io/getting-started/img/aachen.jpg"
+                    }
+                });
+                myMap.addMarker([-399432, 4463713], {
+                    layer: "poi",
+                    group: "Edad Media",
+                    data: {
+                        "Nombre": "Alhambra",
+                        "Fecha de inicio de construcción": "c. 1238",
+                        "Uso": "Residencia",
+                        "Fotografía__image_auto_200": "//sitna.github.io/getting-started/img/alhambra.jpg"
+                    }
+                });
+                myMap.addMarker([-720856, 7112550], {
+                    layer: "poi",
+                    group: "Prehistoria",
+                    data: {
+                        "Nombre": "Newgrange",
+                        "Fecha de inicio de construcción": "3300-2900 a.e.c.",
+                        "Uso": "Funerario",
+                        "Fotografía__image_auto_200": "//sitna.github.io/getting-started/img/newgrange.jpg"
+                    }
+                });
+                myMap.addMarker([2641252, 4575413], {
+                    layer: "poi",
+                    group: "Edad Antigua",
+                    data: {
+                        "Nombre": "Partenón",
+                        "Fecha de inicio de construcción": "447 a.e.c.",
+                        "Uso": "Templo",
+                        "Fotografía__image_auto_200": "//sitna.github.io/getting-started/img/parthenon.jpg"
+                    }
+                });
+                myMap.addMarker([236074, 6241789], {
+                    layer: "poi",
+                    group: "Edad Moderna",
+                    data: {
+                        "Nombre": "Palacio de Versalles",
+                        "Fecha de inicio de construcción": "1661",
+                        "Uso": "Residencia",
+                        "Fotografía__image_auto_200": "//sitna.github.io/getting-started/img/versailles.jpg"
+                    }
+                });
+                
+                // Añadimos un botón de búsqueda de ciudades
+                const searchButton = document.createElement("button");
+                searchButton.addEventListener("click", function (e) {
+                    const pattern = prompt("Nombre de ciudad");
+                    const patternRegExp = new RegExp(pattern, "i");
+                    const capitalsLayer = myMap.getLayer("capitales");
+                    for (var i = 0, ii = capitalsLayer.features.length; i < ii; i++) {
+                        const feature = features[i];
+                        if (patternRexExp.test(feature.getData().name)) {
+                            // Resaltamos la entidad encontrada
+                            feature.setStyle({
+                                strokeColor: "#009900"
+                            });
+                            // Centramos el mapa en la entidad geográfica y con un área de influencia de 10 km
+                            const center = feature.getCoordinates();
+                            myMap.setExtent([center[0] - 10000, center[1] - 10000, center[0] + 10000, center[1] + 10000], { animate: true });
+                            break;
+                        }
+                    });
+                });
+                document.getElementById("toggles").appendChild(searchButton);
+            });
+        });
+    </script>
+</body>
+</html>
