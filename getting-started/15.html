@@ -104,7 +104,7 @@
                             feature.setStyle({
                                 strokeColor: "#009900"
                             });
-                            // Centramos el mapa en la entidad geográfica y con un área de influencia de 10 km
+                            // Centramos el mapa en la entidad geográfica y con un radio de 10 km
                             const center = feature.getCoordinates();
                             myMap.setExtent([center[0] - 10000, center[1] - 10000, center[0] + 10000, center[1] + 10000], { animate: true });
                             break;
