@@ -55,6 +55,6 @@
         content: "\e072";
     }
 
-.lo-hidden {
+.tc-map .tc-ctl.lo-hidden {
     display: none;
 }
