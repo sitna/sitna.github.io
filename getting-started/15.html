@@ -98,7 +98,7 @@
                     const capitalsLayer = myMap.getLayer("capitales");
                     for (var i = 0, ii = capitalsLayer.features.length; i < ii; i++) {
                         const feature = capitalsLayer.features[i];
-                        if (patternRexExp.test(feature.getData().name)) {
+                        if (patternRegExp.test(feature.getData().name)) {
                             // Resaltamos la entidad encontrada
                             feature.setStyle({
                                 strokeColor: "#009900"
