@@ -23,11 +23,17 @@
     display: none;
 }
 
+#toggles {
+    position: absolute;
+    bottom: 6rem;
+    z-index: 10100;
+    display: flex;
+}
+
 #basemaps-toggle, #layers-toggle {
     border: none;
     background-color: transparent;
     color: black;
-    position: absolute;
     font-size: 3rem;
     bottom: 2rem;
     z-index: 10100;
