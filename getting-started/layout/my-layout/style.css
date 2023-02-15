@@ -26,8 +26,11 @@
 #toggles {
     position: absolute;
     bottom: 6rem;
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 10100;
     display: flex;
+    gap: 1rem;
 }
 
 #basemaps-toggle, #layers-toggle {
