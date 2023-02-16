@@ -13,7 +13,7 @@ Entre otras capacidades, la API SITNA:
 - Ofrece funciones habituales de navegación de los visores de mapas, como zoom, mapa de situación y herramientas de medición.
 - Permite buscar un municipio de Navarra por su denominación, una dirección, una parcela catastral o un punto por sus coordenadas, entre otras opciones.
 - Tiene una configuración por defecto que permite de manera fácil crear un mapa básico de Navarra, con herramientas de uso común y mapas de fondo procedentes de IDENA, como ortofotos, el mapa base, la cartografía topográfica o el catastro.
-- Es posible añadir información geográfica mediante servicios [WMS](https://es.wikipedia.org/wiki/Web_Map_Service) y [WMTS](https://en.wikipedia.org/wiki/Web_Map_Tile_Service).
+- Es posible añadir información geográfica mediante servicios [WMS](https://es.wikipedia.org/wiki/Web_Map_Service), [WMTS](https://en.wikipedia.org/wiki/Web_Map_Tile_Service) y [WFS](https://es.wikipedia.org/wiki/Web_Feature_Service).
 - Permite crear marcadores puntuales con información asociada.
 - También es posible cargar información geográfica desde un fichero en formato KML, GeoJSON u otros.
 
