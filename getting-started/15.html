@@ -97,25 +97,24 @@
                     const pattern = prompt("Nombre de ciudad");
                     const patternRegExp = new RegExp(pattern, "i");
                     const capitalsLayer = myMap.getLayer("capitales");
-                    for (var i = 0, ii = capitalsLayer.features.length; i < ii; i++) {
-                        const feature = capitalsLayer.features[i];
-                        if (patternRegExp.test(feature.getData().name)) {
-                            // Resaltamos la entidad encontrada
-                            feature.setStyle({
-                                strokeColor: "#009900"
-                            });
-                            // Centramos el mapa en la entidad geográfica y con un radio de 10 km
-                            const center = feature.getCoordinates();
-                            myMap.setExtent([
-                                center[0] - 10000, 
-                                center[1] - 10000, 
-                                center[0] + 10000, 
-                                center[1] + 10000
-                            ], { 
-                                animate: true 
-                            });
-                            break;
-                        }
+                    const foundFeature = capitalsLayer.features
+                        .find(feature => patternRegExp.test(feature.getData().name));
+                    if (foundFeature) {
+                        // Resaltamos la entidad encontrada
+                        foundFeature.setStyle({
+                            strokeColor: "#009900"
+                        });
+                        // Centramos el mapa en la entidad geográfica y con un radio de 10 km
+                        const center = foundFeature.getCoordinates();
+                        const radius = 10000;
+                        myMap.setExtent([
+                            center[0] - radius, 
+                            center[1] - radius, 
+                            center[0] + radius, 
+                            center[1] + radius
+                        ], { 
+                            animate: true 
+                        });
                     }
                 });
                 document.getElementById("toggles").appendChild(searchButton);
