@@ -874,3 +874,4 @@ myMap.loaded(() => {
     });
 });
 ```
+[Este es el resultado.](getting-started/15.html)
