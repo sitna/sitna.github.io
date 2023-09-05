@@ -137,7 +137,10 @@ const myMap = new SITNA.Map("mapa", {
 Ahora [puedes comprobar](getting-started/05.html) que si abrimos la pestaña de herramientas, podemos cambiar el mapa de fondo que estamos viendo.
 
 ### 6. Añadiendo capas de trabajo
-El visor hasta ahora es poco interesante, porque no tenemos más que un fondo. Vamos a añadir alguna capa sobre la que trabajar. Por ejemplo, vamos a añadir una capa que muestra los países de la Unión Europea desde un servicio [WMS](https://es.wikipedia.org/wiki/Web_Map_Service) de la Agencia Europea de Medio Ambiente:
+El visor hasta ahora es poco interesante, porque no tenemos más que un fondo. Vamos a añadir alguna capa sobre la que trabajar. Para visualizar mapas por internet existe el estándar [WMS](https://es.wikipedia.org/wiki/Web_Map_Service). Las infraestructuras de 
+datos espaciales suelen disponer de catálogos de servicios WMS públicos que se pueden explotar, Por ejemplo, este es el [catálogo de la Infraestructura de Datos Espaciales de España](https://idee.es/web/idee/segun-tipo-de-servicio).
+
+Vamos a añadir una capa que muestra los países de la Unión Europea desde un servicio ofrecido por la Agencia Europea de Medio Ambiente:
 
 [[Editar código]](https://jsfiddle.net/jbqntxcr/)
 ```javascript
@@ -163,6 +166,8 @@ const myMap = new SITNA.Map("mapa", {
 ```
 Y ya tenemos [los países en el mapa](getting-started/06.html). Si pulsas sobre un país, enviarás una consulta `GetFeatureInfo` al servicio WMS y obtendrás información relevante.
 Los valores de la opción `layerNames` se han obtenido del [documento de capacidades del servicio WMS](https://bio.discomap.eea.europa.eu/arcgis/services/Internal/Basemap_EEA38_WM/MapServer/WMSServer?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities).
+
+Las infraestructuras de datos espaciales ofrecen catálogos de servicios WMS públicos
 
 ### 7. Ajustando las capas de trabajo
 Tal como está el visor ahora, tenemos información de los países, pero ya no se ve la ortofotografía. Además, si miramos en las herramientas vemos que la capa cargada tiene un nombre poco amigable. Vamos a dejar solo las fronteras y vamos a poner un título a la capa:
@@ -750,3 +755,122 @@ myMap.loaded(() => {
 });
 ```
 Ahora tenemos un [visor con una maquetación personalizada](getting-started/14.html). Hemos eliminado controles superfluos y hemos colocado los que nos interesan en otro contenedor.
+
+### 15. Trabajando con entidades geográficas
+Los objetos del mapa son instancias de clases que tienen métodos y propiedades para poder ser manipuladas. Vamos a añadir un botón de búsqueda de ciudades. Para ello vamos a obtener la instancia de capa de ciudades y vamos a recorrer la colección de instancias de entidades geográficas hasta encontrar una cuyo nombre encaja con el patrón de búsqueda.
+
+[[Editar código]](https://jsfiddle.net/zb4jsoy1/)
+```javascript
+const myMap = new SITNA.Map("mapa", {
+    // Instanciamos el mapa con una maquetación personalizada
+    layout: "//sitna.github.io/getting-started/layout/my-layout"
+});
+
+myMap.loaded(() => {
+    myMap.addLayer({
+        id: "poi",
+        type: SITNA.Consts.layerType.VECTOR,
+        title: "Puntos de interés"
+    }, () => {
+        myMap.addMarker([-203288, 6652999], {
+            layer: "poi",
+            group: "Prehistoria",
+            data: {
+                "Nombre": "Stonehenge",
+                "Fecha de inicio de construcción": "2400-2200 a.e.c.",
+                "Uso": "Desconocido",
+                "Fotografía__image_auto_200": "//sitna.github.io/getting-started/img/stonehenge.jpg"
+            }
+        });
+        myMap.addMarker([1390641, 5144550], {
+            layer: "poi",
+            group: "Edad Antigua",
+            data: {
+                "Nombre": "Coliseo",
+                "Fecha de inicio de construcción": "72 e.c.",
+                "Uso": "Anfiteatro",
+                "Fotografía__image_auto_200": "//sitna.github.io/getting-started/img/colosseum.jpg"
+            }
+        });
+        myMap.addMarker([677254, 6581543], {
+            layer: "poi",
+            group: "Edad Media",
+            data: {
+                "Nombre": "Catedral de Aquisgrán",
+                "Fecha de inicio de construcción": "796",
+                "Uso": "Templo",
+                "Fotografía__image_auto_200": "//sitna.github.io/getting-started/img/aachen.jpg"
+            }
+        });
+        myMap.addMarker([-399432, 4463713], {
+            layer: "poi",
+            group: "Edad Media",
+            data: {
+                "Nombre": "Alhambra",
+                "Fecha de inicio de construcción": "c. 1238",
+                "Uso": "Residencia",
+                "Fotografía__image_auto_200": "//sitna.github.io/getting-started/img/alhambra.jpg"
+            }
+        });
+        myMap.addMarker([-720856, 7112550], {
+            layer: "poi",
+            group: "Prehistoria",
+            data: {
+                "Nombre": "Newgrange",
+                "Fecha de inicio de construcción": "3300-2900 a.e.c.",
+                "Uso": "Funerario",
+                "Fotografía__image_auto_200": "//sitna.github.io/getting-started/img/newgrange.jpg"
+            }
+        });
+        myMap.addMarker([2641252, 4575413], {
+            layer: "poi",
+            group: "Edad Antigua",
+            data: {
+                "Nombre": "Partenón",
+                "Fecha de inicio de construcción": "447 a.e.c.",
+                "Uso": "Templo",
+                "Fotografía__image_auto_200": "//sitna.github.io/getting-started/img/parthenon.jpg"
+            }
+        });
+        myMap.addMarker([236074, 6241789], {
+            layer: "poi",
+            group: "Edad Moderna",
+            data: {
+                "Nombre": "Palacio de Versalles",
+                "Fecha de inicio de construcción": "1661",
+                "Uso": "Residencia",
+                "Fotografía__image_auto_200": "//sitna.github.io/getting-started/img/versailles.jpg"
+            }
+        });
+
+        // Añadimos un botón de búsqueda de ciudades
+        const searchButton = document.createElement("button");
+        searchButton.setAttribute("id", "search-button");
+        searchButton.addEventListener("click", function (e) {
+            const pattern = prompt("Nombre de ciudad");
+            const patternRegExp = new RegExp(pattern, "i");
+            const capitalsLayer = myMap.getLayer("capitales");
+            const foundFeature = capitalsLayer.features
+                .find(feature => patternRegExp.test(feature.getData().name));
+            if (foundFeature) {
+                // Resaltamos la entidad encontrada
+                foundFeature.setStyle({
+                    strokeColor: "#009900"
+                });
+                // Centramos el mapa en la entidad geográfica y con un radio de 10 km
+                const center = foundFeature.getCoordinates();
+                const radius = 10000;
+                myMap.setExtent([
+                    center[0] - radius,
+                    center[1] - radius,
+                    center[0] + radius, 
+                    center[1] + radius
+                ], { 
+                    animate: true 
+                });
+            }
+        });
+        document.getElementById("toggles").appendChild(searchButton);
+    });
+});
+```
