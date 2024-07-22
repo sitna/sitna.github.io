@@ -167,8 +167,6 @@ const myMap = new SITNA.Map("mapa", {
 Y ya tenemos [los países en el mapa](getting-started/06.html). Si pulsas sobre un país, enviarás una consulta `GetFeatureInfo` al servicio WMS y obtendrás información relevante.
 Los valores de la opción `layerNames` se han obtenido del [documento de capacidades del servicio WMS](https://bio.discomap.eea.europa.eu/arcgis/services/Internal/Basemap_EEA38_WM/MapServer/WMSServer?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities).
 
-Las infraestructuras de datos espaciales ofrecen catálogos de servicios WMS públicos
-
 ### 7. Ajustando las capas de trabajo
 Tal como está el visor ahora, tenemos información de los países, pero ya no se ve la ortofotografía. Además, si miramos en las herramientas vemos que la capa cargada tiene un nombre poco amigable. Vamos a dejar solo las fronteras y vamos a poner un título a la capa:
 
