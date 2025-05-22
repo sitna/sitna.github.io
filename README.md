@@ -62,7 +62,7 @@ Y así tenemos [nuestro primer visor](getting-started/01.html). Podemos observar
 ### 2. Cambiando el mapa de fondo
 Vamos a empezar a modificar los valores por defecto del visor. El [constructor](https://sitna.navarra.es/api/doc/SITNA.Map.html) de `SITNA.Map` acepta como segundo parámetro un objeto con el que se le pueden pasar opciones de configuración para modificar su aspecto y comportamiento. 
 
-Supongamos que queremos poner una ortofotografía como mapa de fondo. Para ello introduciremos la opción `baseLayers`. Hay varias maneras de usar esta opción, pero empezaremos por la mas sencilla: En la [documentación](https://sitna.navarra.es/api/doc/SITNA.Consts.layer.html) tenemos una lista de capas predeterminadas que podemos instanciar mediante una constante del espacio de nombres `SITNA.Consts.layer`. Basta con asignarle a la opción `baseLayers` un array con un elemento cuyo valor es la constante correspondiente a la capa deseada:
+Supongamos que queremos poner una ortofotografía como mapa de fondo. Para ello introduciremos la opción `baseLayers`. Hay varias maneras de usar esta opción, pero empezaremos por la mas sencilla: En la [documentación](https://sitna.navarra.es/api/doc/SITNA.html#.Consts) tenemos una lista de capas predeterminadas que podemos instanciar mediante una constante del espacio de nombres `SITNA.Consts.layer`. Basta con asignarle a la opción `baseLayers` un array con un elemento cuyo valor es la constante correspondiente a la capa deseada:
 
 [[Editar código]](https://jsfiddle.net/9mp847ne/)
 ```javascript
@@ -532,7 +532,7 @@ myMap.loaded(() => {
 Con estos cambios, los marcadores [están clasificados y tienen información asociada](getting-started/12.html).
 
 ### 13. Añadiendo atributos de imagen.
-Ahora tenemos información asociada a cada marcador, pero es exclusivamente textual, y sería interesante añadir una fotografía ilustrativa. Afortunadamente la API SITNA ofrece [un mecanismo](https://sitna.navarra.es/api/doc/tutorial-4-embedding.html) para insertar atributos de imagen a un marcador.
+Ahora tenemos información asociada a cada marcador, pero es exclusivamente textual, y sería interesante añadir una fotografía ilustrativa. Afortunadamente la API SITNA ofrece [un mecanismo](https://sitna.navarra.es/api/doc/tutorial-3-embedding.html) para insertar atributos de imagen a un marcador.
 
 [[Editar código]](https://jsfiddle.net/2ur8Loe4/)
 ```javascript
