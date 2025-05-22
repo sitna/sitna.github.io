@@ -39,7 +39,7 @@ Para incrustar un visor en una aplicación web, hacen falta tres elementos:
 ### 1. Visor por defecto
 Como primer paso, creamos un documento HTML que incluya los tres elementos:
 
-[[Editar código]](https://jsfiddle.net/bnq56tou/)
+[[Editar código]](https://jsfiddle.net/y2qa871k/)
 ```html
 <!DOCTYPE html>
 <html>
@@ -64,7 +64,7 @@ Vamos a empezar a modificar los valores por defecto del visor. El [constructor](
 
 Supongamos que queremos poner una ortofotografía como mapa de fondo. Para ello introduciremos la opción `baseLayers`. Hay varias maneras de usar esta opción, pero empezaremos por la mas sencilla: En la [documentación](https://sitna.navarra.es/api/doc/SITNA.Consts.layer.html) tenemos una lista de capas predeterminadas que podemos instanciar mediante una constante del espacio de nombres `SITNA.Consts.layer`. Basta con asignarle a la opción `baseLayers` un array con un elemento cuyo valor es la constante correspondiente a la capa deseada:
 
-[[Editar código]](https://jsfiddle.net/j09tm6yo/)
+[[Editar código]](https://jsfiddle.net/9mp847ne/)
 ```javascript
 const myMap = new SITNA.Map("mapa", {
     // Establecemos como única capa base la ortofotografía del IGN
@@ -76,7 +76,7 @@ Aquí tenemos [el resultado](getting-started/02.html). `SITNA.Consts.layer.IGN_E
 ### 3. Cambiando la extensión inicial del mapa
 Supongamos que queremos crear un visor centrado en la Unión Europea. Lo podemos hacer pasándole los valores adecuados a la opción `initialExtent`. Estos son cuatro coordenadas indicando los límites hacia el oeste, sur, este y norte de la extensión inicial del mapa. Dado que por defecto los mapas de la API SITNA utilizan el sistema de referencia de coordenadas EPSG:25830 (uno de los oficiales en la Península Ibérica), hay que introducir las coordenadas en ese sistema de referencia. De momento no te preocupes sobre qué es un sistema de referencia de coordenadas o el valor de los límites de los cuatro puntos cardinales, los explicaremos en el siguiente punto.
 
-[[Editar código]](https://jsfiddle.net/r3ogqbja/)
+[[Editar código]](https://jsfiddle.net/kfbjoe6n/)
 ```javascript
 const myMap = new SITNA.Map("mapa", {
     baseLayers: [SITNA.Consts.layer.IGN_ES_ORTHOPHOTO],
@@ -102,7 +102,7 @@ Podemos comprobar que el mapa de fondo que hemos elegido no es el más adecuado 
 
 Pero antes de hacer el cambio, hay que tener en cuenta que esta capa solamente es compatible con el sistema de referencia de coordenadas EPSG:3857, típico de capas que tienen cobertura mundial. Por tanto, hay que utilizar la opción `crs` para establecerlo. No hay que olvidar establecer las coordenadas de `initialExtent` en el nuevo sistema de referencia de coordenadas.
 
-[[Editar código]](https://jsfiddle.net/5u7nj6xk/)
+[[Editar código]](https://jsfiddle.net/c1udq4f7/)
 ```javascript
 const myMap = new SITNA.Map("mapa", {
     // Establecemos como capa de fondo la imagen satélite ofrecida por Mapbox
@@ -118,7 +118,7 @@ Obtenemos [este resultado](getting-started/04.html).
 ### 5. Añadiendo capas de fondo
 Tenemos una capa de imagen satélite como fondo, pero el visor tiene incorporado un control para seleccionar la capa de fondo, así que le podemos poner más de una. Vamos a incluir una capa de vista satélite de Mapbox y unos mapas base de Mapbox y Carto.
 
-[[Editar código]](https://jsfiddle.net/fmavzLo3/)
+[[Editar código]](https://jsfiddle.net/1skewvta/)
 ```javascript
 const myMap = new SITNA.Map("mapa", {
     // Establecemos cuatro capas para el fondo, por defecto la imagen satélite ofrecida por Mapbox
@@ -142,7 +142,7 @@ datos espaciales suelen disponer de catálogos de servicios WMS públicos que se
 
 Vamos a añadir una capa que muestra los países de la Unión Europea desde un servicio ofrecido por la Agencia Europea de Medio Ambiente:
 
-[[Editar código]](https://jsfiddle.net/x7y4qutd/)
+[[Editar código]](https://jsfiddle.net/rLwf2cza/)
 ```javascript
 const myMap = new SITNA.Map("mapa", {
     baseLayers: [
@@ -170,7 +170,7 @@ Los valores de la opción `layerNames` se han obtenido del [documento de capacid
 ### 7. Ajustando las capas de trabajo
 Tal como está el visor ahora, tenemos información de los países, pero ya no se ve la ortofotografía. Además, si miramos en las herramientas vemos que la capa cargada tiene un nombre poco amigable. Vamos a dejar solo las fronteras y vamos a poner un título a la capa:
 
-[[Editar código]](https://jsfiddle.net/h9q7fnrd/)
+[[Editar código]](https://jsfiddle.net/bmxujdh3/)
 ```javascript
 const myMap = new SITNA.Map("mapa", {
     baseLayers: [
@@ -199,7 +199,7 @@ El resultado [es este](getting-started/07.html).
 ### 8. Añadiendo entidades vectoriales en archivos geográficos
 Además de datos raster, es posible añadir datos vectoriales desde un servicio WFS o desde archivos geográficos en formato KML, GeoJSON, etc. Vamos a añadir un par de archivos:
 
-[[Editar código]](https://jsfiddle.net/5et2wjsk/)
+[[Editar código]](https://jsfiddle.net/Lz7pcjw8/)
 ```javascript
 const myMap = new SITNA.Map("mapa", {
     baseLayers: [
@@ -239,9 +239,9 @@ const myMap = new SITNA.Map("mapa", {
 Y ya tenemos [dos capas de trabajo más](getting-started/08.html). La API SITNA intenta inferir el formato de archivo geográfico por su extensión en el nombre, por eso la fuente de datos de la capa de ríos es reconocida como un archivo KML. No obstante, el formato se puede especificar mediante la propiedad `format`, como en la capa de capitales.
 
 ### 9. Cambiando los controles de usuario
-Por defecto, la API SITNA carga con el visor una serie de controles de usuario, como la galería de mapas de fondo o un árbol de capas de trabajo. En la [documentación](https://sitna.navarra.es/api/doc/global.html#MapControlOptions) hay una lista con ejemplos de los controles que se pueden utilizar. Los controles que se cargan se pueden cambiar mediante la propiedad `controls` de las opciones de configuración. Por ejemplo, vamos a quitar el árbol de capas de trabajo y en su lugar vamos a poner una tabla de contenidos como la que tiene el visor de IDENA:
+Por defecto, la API SITNA carga con el visor una serie de controles de usuario, como la galería de mapas de fondo o un árbol de capas de trabajo. En la [documentación](https://sitna.navarra.es/api/doc/SITNA.control.html#.MapControlOptions) hay una lista con ejemplos de los controles que se pueden utilizar. Los controles que se cargan se pueden cambiar mediante la propiedad `controls` de las opciones de configuración. Por ejemplo, vamos a quitar el árbol de capas de trabajo y en su lugar vamos a poner una tabla de contenidos como la que tiene el visor de IDENA:
 
-[[Editar código]](https://jsfiddle.net/u6rmk2gh/)
+[[Editar código]](https://jsfiddle.net/8za5x7t1/)
 ```javascript
 const myMap = new SITNA.Map("mapa", {
     baseLayers: [
@@ -290,7 +290,7 @@ Una vez configurado el visor, vamos a añadir lógica. Supongamos que queremos a
 
 Por otro lado, cuando se introduce lógica que afecta a elementos del mapa, es necesario meterla dentro de una función de callback que pasará como parámetro al método `loaded` del objeto de mapa. De esta forma nos aseguramos de que no se ejecuta hasta que el mapa está cargado correctamente.
 
-[[Editar código]](https://jsfiddle.net/3qehby6v/)
+[[Editar código]](https://jsfiddle.net/uv124j5n/)
 ```javascript
 const myMap = new SITNA.Map("mapa", {
     baseLayers: [
@@ -350,7 +350,7 @@ Si no se especifica nada más que las coordenadas en la llamada la método `addM
 
 Pero generalmente nos interesa añadir los marcadores a una capa concreta, así que vamos a hacer eso: añadiremos una capa al mapa y cuando esté lista añadiremos los marcadores a ella.
 
-[[Editar código]](https://jsfiddle.net/urfqhw3c/)
+[[Editar código]](https://jsfiddle.net/oh0bLk8w/)
 ```javascript
 const myMap = new SITNA.Map("mapa", {
     baseLayers: [
@@ -414,7 +414,7 @@ Ahora [los marcadores están en la capa "Puntos de interés"](getting-started/11
 ### 12. Enriqueciendo los marcadores.
 Por ahora los marcadores no dicen mucho. Vamos a añadirles información. Por un lado, vamos a meterlos en grupos. Si metemos un marcador en un grupo, tendrá un icono diferenciado que se mostrará en la leyenda. Eso se hace con la propiedad `group`. Por otro lado, vamos a meter atributos al marcador. Esto se hace asignando un diccionario de pares clave-valor a la propiedad `data`.
 
-[[Editar código]](https://jsfiddle.net/jb01k4ex/)
+[[Editar código]](https://jsfiddle.net/1d6hpjs0/)
 ```javascript
 const myMap = new SITNA.Map("mapa", {
     baseLayers: [
@@ -534,7 +534,7 @@ Con estos cambios, los marcadores [están clasificados y tienen información aso
 ### 13. Añadiendo atributos de imagen.
 Ahora tenemos información asociada a cada marcador, pero es exclusivamente textual, y sería interesante añadir una fotografía ilustrativa. Afortunadamente la API SITNA ofrece [un mecanismo](https://sitna.navarra.es/api/doc/tutorial-4-embedding.html) para insertar atributos de imagen a un marcador.
 
-[[Editar código]](https://jsfiddle.net/d0kyx1gh/)
+[[Editar código]](https://jsfiddle.net/2ur8Loe4/)
 ```javascript
 const myMap = new SITNA.Map("mapa", {
     baseLayers: [
@@ -666,7 +666,7 @@ Aunque en base a parámetros del constructor de `SITNA.Map` es posible un gran g
 
 Vamos a quitar de los parámetros del constructor la configuración del visor que hemos creado y la vamos a añadir a una maquetación:
 
-[[Editar código]](https://jsfiddle.net/fven64wj/)
+[[Editar código]](https://jsfiddle.net/9dz38y1k/)
 ```javascript
 const myMap = new SITNA.Map("mapa", {
     // Instanciamos el mapa con una maquetación personalizada
@@ -757,7 +757,7 @@ Ahora tenemos un [visor con una maquetación personalizada](getting-started/14.h
 ### 15. Trabajando con entidades geográficas
 Los objetos del mapa son instancias de clases que tienen métodos y propiedades para poder ser manipuladas. Vamos a añadir un botón de búsqueda de ciudades. Para ello vamos a obtener la instancia de capa de ciudades y vamos a recorrer la colección de instancias de entidades geográficas hasta encontrar una cuyo nombre encaja con el patrón de búsqueda.
 
-[[Editar código]](https://jsfiddle.net/zb4jsoy1/)
+[[Editar código]](https://jsfiddle.net/d4ybhwqn/)
 ```javascript
 const myMap = new SITNA.Map("mapa", {
     // Instanciamos el mapa con una maquetación personalizada
